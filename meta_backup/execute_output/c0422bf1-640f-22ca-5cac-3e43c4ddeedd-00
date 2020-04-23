@@ -1,0 +1,18 @@
+{
+  "uuid" : "c0422bf1-640f-22ca-5cac-3e43c4ddeedd-00",
+  "last_modified" : 1584089454763,
+  "version" : "3.0.0.20500",
+  "content" : "Counters: 37\n\tFile System Counters\n\t\tFILE: Number of bytes read=0\n\t\tFILE: Number of bytes written=212449\n\t\tFILE: Number of read operations=0\n\t\tFILE: Number of large read operations=0\n\t\tFILE: Number of write operations=0\n\t\tHDFS: Number of bytes read=0\n\t\tHDFS: Number of bytes written=0\n\t\tHDFS: Number of read operations=3\n\t\tHDFS: Number of large read operations=0\n\t\tHDFS: Number of write operations=2\n\tJob Counters \n\t\tLaunched reduce tasks=1\n\t\tTotal time spent by all reduces in occupied slots (ms)=2115\n\t\tTotal time spent by all reduce tasks (ms)=2115\n\t\tTotal vcore-seconds taken by all reduce tasks=2115\n\t\tTotal megabyte-seconds taken by all reduce tasks=2165760\n\tMap-Reduce Framework\n\t\tCombine input records=0\n\t\tCombine output records=0\n\t\tReduce input groups=0\n\t\tReduce shuffle bytes=0\n\t\tReduce input records=0\n\t\tReduce output records=0\n\t\tSpilled Records=0\n\t\tShuffled Maps =0\n\t\tFailed Shuffles=0\n\t\tMerged Map outputs=0\n\t\tGC time elapsed (ms)=51\n\t\tCPU time spent (ms)=290\n\t\tPhysical memory (bytes) snapshot=171651072\n\t\tVirtual memory (bytes) snapshot=2122821632\n\t\tTotal committed heap usage (bytes)=146800640\n\tShuffle Errors\n\t\tBAD_ID=0\n\t\tCONNECTION=0\n\t\tIO_ERROR=0\n\t\tWRONG_LENGTH=0\n\t\tWRONG_MAP=0\n\t\tWRONG_REDUCE=0\n\tFile Output Format Counters \n\t\tBytes Written=0\n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1584089398180",
+    "yarn_application_id" : "application_1581647538653_6837",
+    "mr_job_id" : "job_1581647538653_6837",
+    "yarn_application_tracking_url" : "ip-172-31-15-241.ap-east-1.compute.internal:19888/jobhistory/job/job_1581647538653_6837",
+    "mapReduceWaitTime" : "43425",
+    "hdfs_bytes_written" : "0",
+    "source_records_count" : "0",
+    "source_records_size" : "0",
+    "endTime" : "1584089454762"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "uuid" : "fc232dad-4948-4823-25b3-b9d6ae345b78",
+  "last_modified" : 1585209982484,
+  "version" : "3.0.0.20500",
+  "table_name" : "DEFAULT.KDN_CATEGORIES",
+  "last_build_job_id" : "bad8158a-c71a-ff8f-deef-421e3beb9a6d",
+  "frequency" : 0,
+  "columns_stats" : [ {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 4266,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 78,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 2239,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 15298,
+    "data_skew_samples" : { }
+  } ],
+  "sample_rows" : [ ],
+  "last_modified_time" : 0,
+  "total_rows" : 0,
+  "mapper_rows" : [ ],
+  "data_source_properties" : {
+    "owner" : "root",
+    "skip_header_line_count" : "0",
+    "total_file_size" : "1430920",
+    "hive_inputFormat" : "org.apache.hadoop.mapred.TextInputFormat",
+    "hive_outputFormat" : "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+    "location" : "hdfs://localhost:9000/user/hive/warehouse/kdn_categories",
+    "partition_column" : "",
+    "total_file_number" : "1",
+    "last_access_time" : "0"
+  }
+}

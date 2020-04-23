@@ -1,0 +1,14 @@
+{
+  "uuid" : "b09179e2-ded0-df66-4725-3cf92d612a34",
+  "last_modified" : 1584697318681,
+  "version" : "3.0.0.20500",
+  "content" : null,
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1584697079416",
+    "buildInstance" : "9090@ip-172-31-15-241.ap-east-1.compute.internal",
+    "mapReduceWaitTime" : "142102",
+    "algorithm" : "INMEM",
+    "endTime" : "1584697318680"
+  }
+}

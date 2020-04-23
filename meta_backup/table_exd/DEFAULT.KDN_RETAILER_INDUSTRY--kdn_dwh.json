@@ -1,0 +1,24 @@
+{
+  "uuid" : "8c369cb5-e47e-68f1-de5d-cd49c60b41c9",
+  "last_modified" : 1584504519554,
+  "version" : "3.0.0.20500",
+  "table_name" : "DEFAULT.KDN_RETAILER_INDUSTRY",
+  "last_build_job_id" : "d635e70f-d160-7667-7eac-aded1b458f4d",
+  "frequency" : 0,
+  "columns_stats" : [ ],
+  "sample_rows" : [ ],
+  "last_modified_time" : 0,
+  "total_rows" : 0,
+  "mapper_rows" : [ ],
+  "data_source_properties" : {
+    "owner" : "root",
+    "skip_header_line_count" : "1",
+    "total_file_size" : "0",
+    "hive_inputFormat" : "org.apache.hadoop.mapred.TextInputFormat",
+    "hive_outputFormat" : "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+    "location" : "hdfs://localhost:9000/user/hive/warehouse/kdn_retailer_industry",
+    "partition_column" : "",
+    "total_file_number" : "0",
+    "last_access_time" : "0"
+  }
+}

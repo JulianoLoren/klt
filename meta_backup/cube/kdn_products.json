@@ -1,0 +1,63 @@
+{
+  "uuid" : "fbb693ee-edc6-0c22-e1a5-5fc1998e6c2b",
+  "last_modified" : 1585340455089,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_products",
+  "owner" : "ADMIN",
+  "descriptor" : "kdn_products",
+  "display_name" : "kdn_products",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "96cee2ef-fc16-2057-42a4-eff681443745",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_7AL012Q3W8",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 56473,
+    "input_records" : 397591,
+    "input_records_size" : 11950712,
+    "last_build_time" : 1585340454980,
+    "last_build_job_id" : "6bc66a0d-e04d-055d-479d-d7e1f19e77b6",
+    "create_time_utc" : 1585339820584,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "KDN_PRODUCTS.QUANTITY" : "/dict/DEFAULT.KDN_PRODUCTS/QUANTITY/9b81f340-11bb-12d3-7e4c-81662cec2b73.dict",
+      "KDN_PRODUCTS.BARCODE" : "/dict/DEFAULT.KDN_PRODUCTS/BARCODE/1e6876d2-d487-6886-49dd-5f2869850aeb.dict",
+      "KDN_PRODUCTS.RETAILER_ID" : "/dict/DEFAULT.KDN_PRODUCTS/RETAILER_ID/3548ed58-2bda-5a2e-b8fb-775b2e7a74b2.dict",
+      "KDN_PRODUCTS.REVENUE" : "/dict/DEFAULT.KDN_PRODUCTS/REVENUE/c67443e3-2825-5fd9-f777-d574dbba77e2.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "KDN_PRODUCTS.REVENUE", 17691, 2 ], [ "KDN_PRODUCTS.QUANTITY", 1436, 2 ], [ "KDN_PRODUCTS.BARCODE", 89879, 3 ], [ "KDN_PRODUCTS.RETAILER_ID", 2424, 2 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "KDN_PRODUCTS.QUANTITY" : {
+        "min" : "0.05",
+        "max" : "200020"
+      },
+      "KDN_PRODUCTS.BARCODE" : {
+        "min" : "0 33200011101",
+        "max" : "barcode"
+      },
+      "KDN_PRODUCTS.RETAILER_ID" : {
+        "min" : "4119",
+        "max" : "654623"
+      },
+      "KDN_PRODUCTS.REVENUE" : {
+        "min" : "0",
+        "max" : "10000759999"
+      }
+    }
+  } ],
+  "create_time_utc" : 1584415204000,
+  "cuboid_bytes" : null,
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

@@ -1,0 +1,63 @@
+{
+  "uuid" : "7a5f53b4-0eb5-cb9b-01a9-770a4cbf20ae",
+  "last_modified" : 1585340517493,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_categories",
+  "owner" : "ADMIN",
+  "descriptor" : "kdn_categories",
+  "display_name" : "kdn_categories",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "451435ca-e940-6b6a-c34b-004f04cf165f",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_C3106Q3XBI",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 4641,
+    "input_records" : 70045,
+    "input_records_size" : 1430499,
+    "last_build_time" : 1585340517421,
+    "last_build_job_id" : "17d8fc7a-8326-67a2-c8f4-b391f7ab97c5",
+    "create_time_utc" : 1585339899675,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "KDN_CATEGORIES.CATEGORY_ID" : "/dict/DEFAULT.KDN_CATEGORIES/CATEGORY_ID/95d9984a-b4f9-90e2-06f2-e161fd3843de.dict",
+      "KDN_CATEGORIES.QUANTITY" : "/dict/DEFAULT.KDN_CATEGORIES/QUANTITY/a7b1db78-7502-ab07-ee17-7307854224d3.dict",
+      "KDN_CATEGORIES.REVENUE" : "/dict/DEFAULT.KDN_CATEGORIES/REVENUE/8760f1d7-7018-e033-ca70-0b3745b1f08f.dict",
+      "KDN_CATEGORIES.RETAILER_ID" : "/dict/DEFAULT.KDN_CATEGORIES/RETAILER_ID/d9a60fd1-9f40-0790-0279-4e0d05d0787c.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "KDN_CATEGORIES.RETAILER_ID", 4225, 2 ], [ "KDN_CATEGORIES.REVENUE", 15479, 2 ], [ "KDN_CATEGORIES.CATEGORY_ID", 75, 1 ], [ "KDN_CATEGORIES.QUANTITY", 2273, 2 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "KDN_CATEGORIES.CATEGORY_ID" : {
+        "min" : "4",
+        "max" : "176"
+      },
+      "KDN_CATEGORIES.QUANTITY" : {
+        "min" : "0.1",
+        "max" : "11500125"
+      },
+      "KDN_CATEGORIES.REVENUE" : {
+        "min" : "0",
+        "max" : "15457532550"
+      },
+      "KDN_CATEGORIES.RETAILER_ID" : {
+        "min" : "4119",
+        "max" : "652137"
+      }
+    }
+  } ],
+  "create_time_utc" : 1585209847981,
+  "cuboid_bytes" : null,
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

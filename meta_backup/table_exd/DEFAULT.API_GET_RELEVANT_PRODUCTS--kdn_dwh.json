@@ -1,0 +1,24 @@
+{
+  "uuid" : "e6445655-e1d6-7b26-734c-17ef41bf88da",
+  "last_modified" : 1585016589049,
+  "version" : "3.0.0.20500",
+  "table_name" : "DEFAULT.API_GET_RELEVANT_PRODUCTS",
+  "last_build_job_id" : "0f0ab389-3000-c6d0-308d-4eb431f99378",
+  "frequency" : 0,
+  "columns_stats" : [ ],
+  "sample_rows" : [ ],
+  "last_modified_time" : 0,
+  "total_rows" : 0,
+  "mapper_rows" : [ ],
+  "data_source_properties" : {
+    "owner" : "root",
+    "skip_header_line_count" : "0",
+    "total_file_size" : "0",
+    "hive_inputFormat" : "org.apache.hadoop.mapred.SequenceFileInputFormat",
+    "hive_outputFormat" : "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+    "location" : null,
+    "partition_column" : "",
+    "total_file_number" : "0",
+    "last_access_time" : "0"
+  }
+}

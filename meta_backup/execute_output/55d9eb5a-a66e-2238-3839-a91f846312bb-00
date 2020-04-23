@@ -1,0 +1,18 @@
+{
+  "uuid" : "55d9eb5a-a66e-2238-3839-a91f846312bb-00",
+  "last_modified" : 1584069894100,
+  "version" : "3.0.0.20500",
+  "content" : "Counters: 49\n\tFile System Counters\n\t\tFILE: Number of bytes read=1410\n\t\tFILE: Number of bytes written=750988\n\t\tFILE: Number of read operations=0\n\t\tFILE: Number of large read operations=0\n\t\tFILE: Number of write operations=0\n\t\tHDFS: Number of bytes read=22995\n\t\tHDFS: Number of bytes written=1714\n\t\tHDFS: Number of read operations=28\n\t\tHDFS: Number of large read operations=0\n\t\tHDFS: Number of write operations=2\n\tJob Counters \n\t\tLaunched map tasks=5\n\t\tLaunched reduce tasks=1\n\t\tOther local map tasks=5\n\t\tTotal time spent by all maps in occupied slots (ms)=49254\n\t\tTotal time spent by all reduces in occupied slots (ms)=13548\n\t\tTotal time spent by all map tasks (ms)=16418\n\t\tTotal time spent by all reduce tasks (ms)=13548\n\t\tTotal vcore-seconds taken by all map tasks=16418\n\t\tTotal vcore-seconds taken by all reduce tasks=13548\n\t\tTotal megabyte-seconds taken by all map tasks=50436096\n\t\tTotal megabyte-seconds taken by all reduce tasks=13873152\n\tMap-Reduce Framework\n\t\tMap input records=25\n\t\tMap output records=25\n\t\tMap output bytes=9452\n\t\tMap output materialized bytes=3479\n\t\tInput split bytes=790\n\t\tCombine input records=0\n\t\tCombine output records=0\n\t\tReduce input groups=5\n\t\tReduce shuffle bytes=3479\n\t\tReduce input records=25\n\t\tReduce output records=5\n\t\tSpilled Records=50\n\t\tShuffled Maps =5\n\t\tFailed Shuffles=0\n\t\tMerged Map outputs=5\n\t\tGC time elapsed (ms)=512\n\t\tCPU time spent (ms)=12560\n\t\tPhysical memory (bytes) snapshot=2552487936\n\t\tVirtual memory (bytes) snapshot=26412838912\n\t\tTotal committed heap usage (bytes)=2455764992\n\tShuffle Errors\n\t\tBAD_ID=0\n\t\tCONNECTION=0\n\t\tIO_ERROR=0\n\t\tWRONG_LENGTH=0\n\t\tWRONG_MAP=0\n\t\tWRONG_REDUCE=0\n\tFile Input Format Counters \n\t\tBytes Read=22205\n\tFile Output Format Counters \n\t\tBytes Written=1714\n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1584069688141",
+    "yarn_application_id" : "application_1581647538653_6559",
+    "mr_job_id" : "job_1581647538653_6559",
+    "yarn_application_tracking_url" : "ip-172-31-15-241.ap-east-1.compute.internal:19888/jobhistory/job/job_1581647538653_6559",
+    "mapReduceWaitTime" : "172811",
+    "hdfs_bytes_written" : "1714",
+    "source_records_count" : "25",
+    "source_records_size" : "0",
+    "endTime" : "1584069894098"
+  }
+}

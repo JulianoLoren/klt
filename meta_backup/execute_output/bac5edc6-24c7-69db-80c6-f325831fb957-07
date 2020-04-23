@@ -1,0 +1,19 @@
+{
+  "uuid" : "bac5edc6-24c7-69db-80c6-f325831fb957-07",
+  "last_modified" : 1583117300405,
+  "version" : "3.0.0.20500",
+  "content" : "Counters: 49\n\tFile System Counters\n\t\tFILE: Number of bytes read=1599219\n\t\tFILE: Number of bytes written=3657051\n\t\tFILE: Number of read operations=0\n\t\tFILE: Number of large read operations=0\n\t\tFILE: Number of write operations=0\n\t\tHDFS: Number of bytes read=703562\n\t\tHDFS: Number of bytes written=2964286\n\t\tHDFS: Number of read operations=16\n\t\tHDFS: Number of large read operations=0\n\t\tHDFS: Number of write operations=6\n\tJob Counters \n\t\tLaunched map tasks=1\n\t\tLaunched reduce tasks=2\n\t\tData-local map tasks=1\n\t\tTotal time spent by all maps in occupied slots (ms)=4271\n\t\tTotal time spent by all reduces in occupied slots (ms)=10585\n\t\tTotal time spent by all map tasks (ms)=4271\n\t\tTotal time spent by all reduce tasks (ms)=10585\n\t\tTotal vcore-seconds taken by all map tasks=4271\n\t\tTotal vcore-seconds taken by all reduce tasks=10585\n\t\tTotal megabyte-seconds taken by all map tasks=4373504\n\t\tTotal megabyte-seconds taken by all reduce tasks=10839040\n\tMap-Reduce Framework\n\t\tMap input records=271959\n\t\tMap output records=271959\n\t\tMap output bytes=23754526\n\t\tMap output materialized bytes=1599203\n\t\tInput split bytes=194\n\t\tCombine input records=0\n\t\tCombine output records=0\n\t\tReduce input groups=271959\n\t\tReduce shuffle bytes=1599203\n\t\tReduce input records=271959\n\t\tReduce output records=271959\n\t\tSpilled Records=543918\n\t\tShuffled Maps =2\n\t\tFailed Shuffles=0\n\t\tMerged Map outputs=2\n\t\tGC time elapsed (ms)=328\n\t\tCPU time spent (ms)=12830\n\t\tPhysical memory (bytes) snapshot=705118208\n\t\tVirtual memory (bytes) snapshot=6412111872\n\t\tTotal committed heap usage (bytes)=486014976\n\tShuffle Errors\n\t\tBAD_ID=0\n\t\tCONNECTION=0\n\t\tIO_ERROR=0\n\t\tWRONG_LENGTH=0\n\t\tWRONG_MAP=0\n\t\tWRONG_REDUCE=0\n\tFile Input Format Counters \n\t\tBytes Read=703171\n\tFile Output Format Counters \n\t\tBytes Written=2964286\n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1583117122416",
+    "yarn_application_id" : "application_1581647538653_2127",
+    "mr_job_id" : "job_1581647538653_2127",
+    "yarn_application_tracking_url" : "ip-172-31-15-241.ap-east-1.compute.internal:19888/jobhistory/job/job_1581647538653_2127",
+    "mapReduceWaitTime" : "154816",
+    "byteSizeBytes" : "2964286",
+    "hdfs_bytes_written" : "2964286",
+    "source_records_count" : "271959",
+    "source_records_size" : "0",
+    "endTime" : "1583117300404"
+  }
+}

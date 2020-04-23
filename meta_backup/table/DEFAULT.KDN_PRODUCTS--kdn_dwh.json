@@ -1,0 +1,26 @@
+{
+  "uuid" : "3387f812-5a36-9cf8-82a2-4fc85c15e0f3",
+  "last_modified" : 1584409573573,
+  "version" : "3.0.0.20500",
+  "name" : "KDN_PRODUCTS",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "RETAILER_ID",
+    "datatype" : "bigint"
+  }, {
+    "id" : "2",
+    "name" : "BARCODE",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "3",
+    "name" : "QUANTITY",
+    "datatype" : "decimal(18,5)"
+  }, {
+    "id" : "4",
+    "name" : "REVENUE",
+    "datatype" : "decimal(18,5)"
+  } ],
+  "source_type" : 0,
+  "table_type" : "MANAGED_TABLE",
+  "database" : "DEFAULT"
+}

@@ -1,0 +1,42 @@
+{
+  "uuid" : "96492137-05a9-354a-e63c-484f07c8afd2",
+  "last_modified" : 1581650811134,
+  "version" : "3.0.0.20500",
+  "name" : "Hive Column Cardinality calculation for table 'DEFAULT.KDN_MERCHANTS'",
+  "tasks" : [ {
+    "uuid" : "96492137-05a9-354a-e63c-484f07c8afd2-00",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : "-table DEFAULT.KDN_MERCHANTS -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/96492137-05a9-354a-e63c-484f07c8afd2/DEFAULT.KDN_MERCHANTS -project kdn_project",
+      "segmentId" : "DEFAULT.KDN_MERCHANTS",
+      "MR_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "96492137-05a9-354a-e63c-484f07c8afd2-01",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "segmentId" : "DEFAULT.KDN_MERCHANTS",
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityUpdateJob",
+      "HADOOP_SHELL_JOB_PARAMS" : "-table DEFAULT.KDN_MERCHANTS -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/96492137-05a9-354a-e63c-484f07c8afd2/DEFAULT.KDN_MERCHANTS -project kdn_project"
+    },
+    "priority" : 10
+  } ],
+  "tasks_check" : null,
+  "type" : "org.apache.kylin.job.execution.DefaultChainedExecutable",
+  "params" : {
+    "submitter" : "ADMIN",
+    "segmentId" : "DEFAULT.KDN_MERCHANTS"
+  },
+  "priority" : 10
+}

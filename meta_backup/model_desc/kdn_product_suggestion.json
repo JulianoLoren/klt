@@ -1,0 +1,27 @@
+{
+  "uuid" : "ac4e4b04-c7eb-3b29-34e2-70ce4102b370",
+  "last_modified" : 1583483665420,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_product_suggestion",
+  "owner" : "ADMIN",
+  "is_draft" : false,
+  "description" : "",
+  "fact_table" : "DEFAULT.KDN_PRODUCT_SUGGESTION",
+  "lookups" : [ ],
+  "dimensions" : [ {
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "columns" : [ "BUSINESS_DATE", "RETAILER_KEY", "PRODUCT_KEY", "CODE", "NAME", "DAILY_SALE_30", "DAILY_SALE_20", "DAILY_SALE_15", "DAILY_SALE_10", "DAILY_SALE_5", "DAILY_SALE_1", "QUANTITY_30_DAYS", "REVENUE_30_DAYS", "ENDING_STOCKS", "INVOICE_FROM", "PREDICT_7" ]
+  } ],
+  "metrics" : [ ],
+  "filter_condition" : "",
+  "partition_desc" : {
+    "partition_date_column" : null,
+    "partition_time_column" : null,
+    "partition_date_start" : 0,
+    "partition_date_format" : "yyyy-MM-dd",
+    "partition_time_format" : "HH:mm:ss",
+    "partition_type" : "APPEND",
+    "partition_condition_builder" : "org.apache.kylin.metadata.model.PartitionDesc$DefaultPartitionConditionBuilder"
+  },
+  "capacity" : "MEDIUM"
+}

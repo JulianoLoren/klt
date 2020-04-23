@@ -1,0 +1,11 @@
+{
+  "uuid" : "bfc4e210-dce2-d594-2b2b-134ad6baef5f-01",
+  "last_modified" : 1584504285455,
+  "version" : "3.0.0.20500",
+  "content" : "org.apache.kylin.engine.mr.exception.HadoopShellException: java.lang.NullPointerException\n\tat org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityUpdateJob.updateKylinTableExd(HiveColumnCardinalityUpdateJob.java:132)\n\tat org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityUpdateJob.run(HiveColumnCardinalityUpdateJob.java:88)\n\tat org.apache.kylin.engine.mr.MRUtil.runMRJob(MRUtil.java:93)\n\tat org.apache.kylin.engine.mr.common.HadoopShellExecutable.doWork(HadoopShellExecutable.java:63)\n\tat org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:179)\n\tat org.apache.kylin.job.execution.DefaultChainedExecutable.doWork(DefaultChainedExecutable.java:71)\n\tat org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:179)\n\tat org.apache.kylin.job.impl.threadpool.DefaultScheduler$JobRunner.run(DefaultScheduler.java:114)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n\nresult code:2\n\tat org.apache.kylin.engine.mr.common.HadoopShellExecutable.doWork(HadoopShellExecutable.java:73)\n\tat org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:179)\n\tat org.apache.kylin.job.execution.DefaultChainedExecutable.doWork(DefaultChainedExecutable.java:71)\n\tat org.apache.kylin.job.execution.AbstractExecutable.execute(AbstractExecutable.java:179)\n\tat org.apache.kylin.job.impl.threadpool.DefaultScheduler$JobRunner.run(DefaultScheduler.java:114)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+  "status" : "ERROR",
+  "info" : {
+    "startTime" : "1584504285367",
+    "endTime" : "1584504285454"
+  }
+}

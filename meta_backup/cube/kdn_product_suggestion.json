@@ -1,0 +1,123 @@
+{
+  "uuid" : "c643ecf7-14f1-ab86-833e-73805a2d53bc",
+  "last_modified" : 1584350711048,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_product_suggestion",
+  "owner" : "ADMIN",
+  "descriptor" : "kdn_product_suggestion",
+  "display_name" : "kdn_product_suggestion",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "488cf8be-05da-097b-6347-1ab6d7ef81c3",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_KLO15C1H95",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 13,
+    "input_records" : 55,
+    "input_records_size" : 6480,
+    "last_build_time" : 1584350710494,
+    "last_build_job_id" : "febd7d75-41f4-efef-6910-8475db36f459",
+    "create_time_utc" : 1584350359226,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "KDN_PRODUCT_SUGGESTION.BUSINESS_DATE" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/BUSINESS_DATE/08e9614b-1ef5-166d-5e9b-840102c7c3aa.dict",
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_30" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/DAILY_SALE_30/5aa12fe8-d1dd-77e5-1bbc-ad187981b41a.dict",
+      "KDN_PRODUCT_SUGGESTION.CODE" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/CODE/a31d7df9-cdb8-a3e0-874d-c8e96cb34fa6.dict",
+      "KDN_PRODUCT_SUGGESTION.NAME" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/NAME/5f5096ad-1d09-35c7-1608-288894b068d8.dict",
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_1" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/DAILY_SALE_1/29ccfddb-bcf5-790a-9dfd-547233eabb4c.dict",
+      "KDN_PRODUCT_SUGGESTION.INVOICE_FROM" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/INVOICE_FROM/2fd74636-fc4f-2924-a83f-44ca4e95ee64.dict",
+      "KDN_PRODUCT_SUGGESTION.REVENUE_30_DAYS" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/REVENUE_30_DAYS/32707887-1b3b-4545-cdf9-76db13a940b9.dict",
+      "KDN_PRODUCT_SUGGESTION.QUANTITY_30_DAYS" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/QUANTITY_30_DAYS/6ce6b326-db3e-dcea-ee43-0cbf1c617d2c.dict",
+      "KDN_PRODUCT_SUGGESTION.PREDICT_7" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/PREDICT_7/2f97b25d-3146-ade7-5def-abd4dc6250e0.dict",
+      "KDN_PRODUCT_SUGGESTION.RETAILER_KEY" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/RETAILER_KEY/85e8d7ad-36e3-c98a-beaa-5f4389ac1331.dict",
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_15" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/DAILY_SALE_15/0a5d8c6e-fed4-40b9-31fa-ad688c98b53f.dict",
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_5" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/DAILY_SALE_5/c7b87066-afa0-db15-e9dc-d26d61f627a1.dict",
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_20" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/DAILY_SALE_20/2f601ab1-fbb6-89d0-e513-39b5dccd70ca.dict",
+      "KDN_PRODUCT_SUGGESTION.PRODUCT_KEY" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/PRODUCT_KEY/ee2caef5-881f-e196-bf8a-323d2d3b33e1.dict",
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_10" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/DAILY_SALE_10/1b6fda5f-7755-e8df-8fa1-0b3525b3671b.dict",
+      "KDN_PRODUCT_SUGGESTION.ENDING_STOCKS" : "/dict/DEFAULT.KDN_PRODUCT_SUGGESTION/ENDING_STOCKS/71a077e4-9820-942f-5e28-be8ef1929913.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "KDN_PRODUCT_SUGGESTION.PRODUCT_KEY", 55, 1 ], [ "KDN_PRODUCT_SUGGESTION.PREDICT_7", 49, 1 ], [ "KDN_PRODUCT_SUGGESTION.CODE", 55, 1 ], [ "KDN_PRODUCT_SUGGESTION.DAILY_SALE_20", 19, 1 ], [ "KDN_PRODUCT_SUGGESTION.DAILY_SALE_10", 6, 1 ], [ "KDN_PRODUCT_SUGGESTION.DAILY_SALE_1", 1, 1 ], [ "KDN_PRODUCT_SUGGESTION.NAME", 54, 1 ], [ "KDN_PRODUCT_SUGGESTION.DAILY_SALE_30", 28, 1 ], [ "KDN_PRODUCT_SUGGESTION.INVOICE_FROM", 4, 1 ], [ "KDN_PRODUCT_SUGGESTION.BUSINESS_DATE", 1, 1 ], [ "KDN_PRODUCT_SUGGESTION.RETAILER_KEY", 24, 1 ], [ "KDN_PRODUCT_SUGGESTION.QUANTITY_30_DAYS", 38, 1 ], [ "KDN_PRODUCT_SUGGESTION.DAILY_SALE_15", 17, 1 ], [ "KDN_PRODUCT_SUGGESTION.REVENUE_30_DAYS", 54, 1 ], [ "KDN_PRODUCT_SUGGESTION.DAILY_SALE_5", 6, 1 ], [ "KDN_PRODUCT_SUGGESTION.ENDING_STOCKS", 15, 1 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "KDN_PRODUCT_SUGGESTION.BUSINESS_DATE" : {
+        "min" : "20200305",
+        "max" : "20200305"
+      },
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_30" : {
+        "min" : "1",
+        "max" : "9"
+      },
+      "KDN_PRODUCT_SUGGESTION.CODE" : {
+        "min" : "072151452991",
+        "max" : "8992304037788"
+      },
+      "KDN_PRODUCT_SUGGESTION.NAME" : {
+        "min" : "(T)(B) Gel Dưỡng Ẩm Derladie Witch Hazel Perfect",
+        "max" : "son shu 163 vỏ đen"
+      },
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_1" : {
+        "min" : "0",
+        "max" : "0"
+      },
+      "KDN_PRODUCT_SUGGESTION.INVOICE_FROM" : {
+        "min" : "10",
+        "max" : "30"
+      },
+      "KDN_PRODUCT_SUGGESTION.REVENUE_30_DAYS" : {
+        "min" : "1020000",
+        "max" : "9761000"
+      },
+      "KDN_PRODUCT_SUGGESTION.QUANTITY_30_DAYS" : {
+        "min" : "1",
+        "max" : "90"
+      },
+      "KDN_PRODUCT_SUGGESTION.PREDICT_7" : {
+        "min" : "0",
+        "max" : "9.45"
+      },
+      "KDN_PRODUCT_SUGGESTION.RETAILER_KEY" : {
+        "min" : "101830",
+        "max" : "99536"
+      },
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_15" : {
+        "min" : "0",
+        "max" : "9"
+      },
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_5" : {
+        "min" : "0",
+        "max" : "5"
+      },
+      "KDN_PRODUCT_SUGGESTION.PRODUCT_KEY" : {
+        "min" : "1011411594.000000000",
+        "max" : "105652943.000000000"
+      },
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_20" : {
+        "min" : "0",
+        "max" : "9"
+      },
+      "KDN_PRODUCT_SUGGESTION.DAILY_SALE_10" : {
+        "min" : "0",
+        "max" : "5"
+      },
+      "KDN_PRODUCT_SUGGESTION.ENDING_STOCKS" : {
+        "min" : "0",
+        "max" : "9"
+      }
+    }
+  } ],
+  "create_time_utc" : 1584350354388,
+  "cuboid_bytes" : "eAElTzkSAzEM+ovqLXQgr+yvZfL3gNMxiEsfW93Vdrofqxx3OyG0d9oZIrwDO0jCSoyd5B273mWnJK12ClJ+eIi92ncxqkraVczCeqw9QG1TQJO62mnLWWR5Z22yQagqaIotf2hBQqw3C+KlP2JR2mSxZwQZ1YFUwdWOYN4fWrHQ8Lhhf0EkF6QW1H1HFdj3yRKLKrbBvz9fRzg2",
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

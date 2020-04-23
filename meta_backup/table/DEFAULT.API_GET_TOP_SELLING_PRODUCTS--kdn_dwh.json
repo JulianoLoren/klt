@@ -1,0 +1,26 @@
+{
+  "uuid" : "884e2f70-f882-1298-e108-7c511476e75d",
+  "last_modified" : 1584430707715,
+  "version" : "3.0.0.20500",
+  "name" : "API_GET_TOP_SELLING_PRODUCTS",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "BARCODE",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "2",
+    "name" : "NAME",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "3",
+    "name" : "AVG_QUANTITY",
+    "datatype" : "decimal(22,9)"
+  }, {
+    "id" : "4",
+    "name" : "AVG_REVENUE",
+    "datatype" : "decimal(22,9)"
+  } ],
+  "source_type" : 0,
+  "table_type" : "VIRTUAL_VIEW",
+  "database" : "DEFAULT"
+}

@@ -1,0 +1,46 @@
+{
+  "uuid" : "48594eb0-96c4-c8c0-c0fe-c90e55144e0f",
+  "last_modified" : 1584432304453,
+  "version" : "3.0.0.20500",
+  "name" : "API_GET_RELEVANT_PRODUCTS_BY_BARCODE",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "ITEM",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "2",
+    "name" : "NAME",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "3",
+    "name" : "RECOMMENDED_ITEM",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "4",
+    "name" : "RECOMMENDED_ITEM_NAME",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "5",
+    "name" : "AVG_QUANTITY",
+    "datatype" : "decimal(22,9)"
+  }, {
+    "id" : "6",
+    "name" : "AVG_REVENUE",
+    "datatype" : "decimal(22,9)"
+  }, {
+    "id" : "7",
+    "name" : "COUNT_COMMON_USERS",
+    "datatype" : "bigint"
+  }, {
+    "id" : "8",
+    "name" : "EXPECTED_COMMON_USERS",
+    "datatype" : "decimal(18,5)"
+  }, {
+    "id" : "9",
+    "name" : "SCORE",
+    "datatype" : "decimal(18,5)"
+  } ],
+  "source_type" : 0,
+  "table_type" : "VIRTUAL_VIEW",
+  "database" : "DEFAULT"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid" : "29b9c57d-b93c-06f0-d654-b462a3cd8270",
+  "last_modified" : 1584409573588,
+  "version" : "3.0.0.20500",
+  "name" : "KDN_TMP_PRODUCTS",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "BARCODE",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "2",
+    "name" : "NAME",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  } ],
+  "source_type" : 0,
+  "table_type" : "MANAGED_TABLE",
+  "database" : "DEFAULT"
+}

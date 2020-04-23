@@ -1,0 +1,218 @@
+{
+  "uuid" : "eac3d3ff-9bc7-2f65-c0d6-e9c1617f029c",
+  "last_modified" : 1584350354363,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_product_suggestion",
+  "is_draft" : false,
+  "model_name" : "kdn_product_suggestion",
+  "description" : "",
+  "null_string" : null,
+  "dimensions" : [ {
+    "name" : "BUSINESS_DATE",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "BUSINESS_DATE",
+    "derived" : null
+  }, {
+    "name" : "RETAILER_KEY",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "RETAILER_KEY",
+    "derived" : null
+  }, {
+    "name" : "PRODUCT_KEY",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "PRODUCT_KEY",
+    "derived" : null
+  }, {
+    "name" : "CODE",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "CODE",
+    "derived" : null
+  }, {
+    "name" : "NAME",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "NAME",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_30",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "DAILY_SALE_30",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_20",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "DAILY_SALE_20",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_15",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "DAILY_SALE_15",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_10",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "DAILY_SALE_10",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_5",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "DAILY_SALE_5",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_1",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "DAILY_SALE_1",
+    "derived" : null
+  }, {
+    "name" : "QUANTITY_30_DAYS",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "QUANTITY_30_DAYS",
+    "derived" : null
+  }, {
+    "name" : "REVENUE_30_DAYS",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "REVENUE_30_DAYS",
+    "derived" : null
+  }, {
+    "name" : "ENDING_STOCKS",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "ENDING_STOCKS",
+    "derived" : null
+  }, {
+    "name" : "INVOICE_FROM",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "INVOICE_FROM",
+    "derived" : null
+  }, {
+    "name" : "PREDICT_7",
+    "table" : "KDN_PRODUCT_SUGGESTION",
+    "column" : "PREDICT_7",
+    "derived" : null
+  } ],
+  "measures" : [ {
+    "name" : "_COUNT_",
+    "function" : {
+      "expression" : "COUNT",
+      "parameter" : {
+        "type" : "constant",
+        "value" : "1"
+      },
+      "returntype" : "bigint"
+    }
+  } ],
+  "dictionaries" : [ ],
+  "rowkey" : {
+    "rowkey_columns" : [ {
+      "column" : "KDN_PRODUCT_SUGGESTION.BUSINESS_DATE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.RETAILER_KEY",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.PRODUCT_KEY",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.CODE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.NAME",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.DAILY_SALE_30",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.DAILY_SALE_20",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.DAILY_SALE_15",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.DAILY_SALE_10",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.DAILY_SALE_5",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.DAILY_SALE_1",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.QUANTITY_30_DAYS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.REVENUE_30_DAYS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.ENDING_STOCKS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.INVOICE_FROM",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCT_SUGGESTION.PREDICT_7",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    } ]
+  },
+  "hbase_mapping" : {
+    "column_family" : [ {
+      "name" : "F1",
+      "columns" : [ {
+        "qualifier" : "M",
+        "measure_refs" : [ "_COUNT_" ]
+      } ]
+    } ]
+  },
+  "aggregation_groups" : [ {
+    "includes" : [ "KDN_PRODUCT_SUGGESTION.BUSINESS_DATE", "KDN_PRODUCT_SUGGESTION.RETAILER_KEY", "KDN_PRODUCT_SUGGESTION.PRODUCT_KEY", "KDN_PRODUCT_SUGGESTION.CODE", "KDN_PRODUCT_SUGGESTION.NAME", "KDN_PRODUCT_SUGGESTION.DAILY_SALE_30", "KDN_PRODUCT_SUGGESTION.DAILY_SALE_20", "KDN_PRODUCT_SUGGESTION.DAILY_SALE_15", "KDN_PRODUCT_SUGGESTION.DAILY_SALE_10", "KDN_PRODUCT_SUGGESTION.DAILY_SALE_5", "KDN_PRODUCT_SUGGESTION.DAILY_SALE_1", "KDN_PRODUCT_SUGGESTION.QUANTITY_30_DAYS", "KDN_PRODUCT_SUGGESTION.REVENUE_30_DAYS", "KDN_PRODUCT_SUGGESTION.ENDING_STOCKS", "KDN_PRODUCT_SUGGESTION.INVOICE_FROM", "KDN_PRODUCT_SUGGESTION.PREDICT_7" ],
+    "select_rule" : {
+      "hierarchy_dims" : [ ],
+      "mandatory_dims" : [ ],
+      "joint_dims" : [ [ "KDN_PRODUCT_SUGGESTION.QUANTITY_30_DAYS", "KDN_PRODUCT_SUGGESTION.REVENUE_30_DAYS", "KDN_PRODUCT_SUGGESTION.ENDING_STOCKS", "KDN_PRODUCT_SUGGESTION.INVOICE_FROM", "KDN_PRODUCT_SUGGESTION.PREDICT_7" ] ]
+    }
+  } ],
+  "signature" : "JBlxq3T3c3AzJxH4fc0VHA==",
+  "notify_list" : [ ],
+  "status_need_notify" : [ "ERROR", "DISCARDED", "SUCCEED" ],
+  "partition_date_start" : 0,
+  "partition_date_end" : 3153600000000,
+  "auto_merge_time_ranges" : [ 604800000, 2419200000 ],
+  "volatile_range" : 0,
+  "retention_range" : 0,
+  "engine_type" : 2,
+  "storage_type" : 2,
+  "override_kylin_properties" : { },
+  "cuboid_black_list" : [ ],
+  "parent_forward" : 3,
+  "mandatory_dimension_set_list" : [ ],
+  "snapshot_table_desc_list" : [ ]
+}

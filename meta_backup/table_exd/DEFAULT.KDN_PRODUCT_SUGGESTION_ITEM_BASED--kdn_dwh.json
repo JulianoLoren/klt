@@ -1,0 +1,79 @@
+{
+  "uuid" : "2940ccca-8741-3392-d751-1ce9c811f8b7",
+  "last_modified" : 1584409631594,
+  "version" : "3.0.0.20500",
+  "table_name" : "DEFAULT.KDN_PRODUCT_SUGGESTION_ITEM_BASED",
+  "last_build_job_id" : "8461e9e4-67c3-a890-81f0-2a21ec0324e9",
+  "frequency" : 0,
+  "columns_stats" : [ {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 140,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 140,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 33,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 1424,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 1719,
+    "data_skew_samples" : { }
+  } ],
+  "sample_rows" : [ ],
+  "last_modified_time" : 0,
+  "total_rows" : 0,
+  "mapper_rows" : [ ],
+  "data_source_properties" : {
+    "owner" : "root",
+    "skip_header_line_count" : "1",
+    "total_file_size" : "115551",
+    "hive_inputFormat" : "org.apache.hadoop.mapred.TextInputFormat",
+    "hive_outputFormat" : "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+    "location" : "hdfs://localhost:9000/user/hive/warehouse/kdn_product_suggestion_item_based",
+    "partition_column" : "",
+    "total_file_number" : "1",
+    "last_access_time" : "0"
+  }
+}

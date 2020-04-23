@@ -1,0 +1,123 @@
+{
+  "uuid" : "f1ec460e-07e6-342a-abc0-36b7b083e5c7",
+  "last_modified" : 1584420778151,
+  "version" : "3.0.0.20500",
+  "name" : "api_get_out_of_stock_product",
+  "owner" : "ADMIN",
+  "descriptor" : "api_get_out_of_stock_product",
+  "display_name" : "api_get_out_of_stock_product",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "a1023b74-3ceb-3ef4-53b6-642b6035bebf",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_TLYIKCY6EI",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 39000,
+    "input_records" : 114510,
+    "input_records_size" : 12026417,
+    "last_build_time" : 1584420777707,
+    "last_build_job_id" : "b5aad469-df3a-650d-ea85-b9e955998f7b",
+    "create_time_utc" : 1584419056879,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "API_GET_OUT_OF_STOCK_PRODUCT.RETAILER_ID" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/RETAILER_ID/c5c69860-c3cb-9604-4581-943e2230e1ce.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.INVOICE_FROM" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/INVOICE_FROM/1f3d46fd-e8e0-a13a-56e6-8d3a4ef548d9.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.ENDING_STOCKS" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/ENDING_STOCKS/54f5162e-e053-39ad-d293-9989f1ed9630.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_15" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/DAILY_SALE_15/bb4d05d4-c43a-b220-055d-3813c7e02d78.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_10" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/DAILY_SALE_10/9d3a29ea-c825-8a98-4ba6-0cbeacab411b.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.REVENUE_30_DAYS" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/REVENUE_30_DAYS/f7ca30ab-79a7-f6ff-4ce1-0a398548881d.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.PRODUCT_ID" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/PRODUCT_ID/d445d248-6ec4-9137-8679-c39b91d7d275.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_20" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/DAILY_SALE_20/efcae5ea-54d6-d641-fc85-000100ac5ba5.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.BUSINESS_DATE" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/BUSINESS_DATE/512e2774-a2d6-190b-f1e7-38d8cfe45a72.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_30" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/DAILY_SALE_30/8b790d7e-a29d-728b-7523-007fe3d40eeb.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.BARCODE" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/BARCODE/6769f9ff-6bc9-ce3e-0b3d-defff4676b56.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_1" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/DAILY_SALE_1/43e79db0-b1b9-1a70-c2ba-84216d1f2507.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.QUANTITY_30_DAYS" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/QUANTITY_30_DAYS/6a5ae8d6-9ee1-5058-8d0b-745af1e7b113.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.NAME" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/NAME/2d3299ea-a133-0245-2d13-c0045936e6a3.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_5" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/DAILY_SALE_5/2d1723d0-66ee-fe14-8ddc-eb755a87e7d6.dict",
+      "API_GET_OUT_OF_STOCK_PRODUCT.PREDICT_7" : "/dict/DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT/PREDICT_7/311ab51a-86e0-5d6d-4dbc-8ce29e69f315.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "API_GET_OUT_OF_STOCK_PRODUCT.PREDICT_7", 4798, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.QUANTITY_30_DAYS", 2026, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.RETAILER_ID", 1912, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.BARCODE", 34269, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.NAME", 33575, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.INVOICE_FROM", 7, 1 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.PRODUCT_ID", 113993, 3 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_30", 1451, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_20", 1339, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.BUSINESS_DATE", 1, 1 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_1", 167, 1 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_10", 1019, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_5", 505, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.ENDING_STOCKS", 454, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.REVENUE_30_DAYS", 17937, 2 ], [ "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_15", 1325, 2 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "API_GET_OUT_OF_STOCK_PRODUCT.RETAILER_ID" : {
+        "min" : "4119",
+        "max" : "645017"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_15" : {
+        "min" : "0",
+        "max" : "76603"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.ENDING_STOCKS" : {
+        "min" : "0",
+        "max" : "6156"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.INVOICE_FROM" : {
+        "min" : "0",
+        "max" : "30"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_10" : {
+        "min" : "0",
+        "max" : "76603"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.REVENUE_30_DAYS" : {
+        "min" : "100000",
+        "max" : "2000001549998"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.PRODUCT_ID" : {
+        "min" : "1306",
+        "max" : "32462400"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.BUSINESS_DATE" : {
+        "min" : "20200316",
+        "max" : "20200316"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_20" : {
+        "min" : "0",
+        "max" : "76603"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_30" : {
+        "min" : "0.331",
+        "max" : "76603"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.BARCODE" : {
+        "min" : "0000000000020",
+        "max" : "9999014000002"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_1" : {
+        "min" : "0",
+        "max" : "4320"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.QUANTITY_30_DAYS" : {
+        "min" : "0.331",
+        "max" : "166450"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.NAME" : {
+        "min" : " Bàn chải đánh răng cho bé từ 3-8 tuổi",
+        "max" : "️Viên dưỡng da MULTI VITA AMPOULE COLLAGEN"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_5" : {
+        "min" : "0",
+        "max" : "17500"
+      },
+      "API_GET_OUT_OF_STOCK_PRODUCT.PREDICT_7" : {
+        "min" : "0",
+        "max" : "6233.95"
+      }
+    }
+  } ],
+  "create_time_utc" : 1584418250538,
+  "cuboid_bytes" : "eAEtUrd1xFAM20W1CuZwq/l5dwM8d4IYEPh/nsr0fD6q7dLv49Y1gPwaEXwV/0ZPPB/TnXyfWE1DZXXfJ1U5UCE+N+QopbBN1rhKZOJb2iJULvTkVJqh0WMUEjZXjKVebo+UoyJxTH4VFQAUEcwGK9pU4VHJ5bl6jcdsKw6Bso1S1BHHWlBUa6LmXqdJ+3QspMKKSmFJSDvm1jxPY54qsQzM2RJ10SeW0LNK1K0Uo0gEyRJCJHBorIheAK10NMY6dfmEceMq2cbFuCTaONdKgorZO1FlFA0pnWdXHB9UoLWaHLHL03jaMAcfanFkQ4YVAIThQLEyfWIQzHUOrG86wbZiySR6QeeqJzsrYCnhE3xZNse+FDqhvFwkpXQtKpX273YbtRRRXmFK8RaAmAvUHrkVc0cwQmnIk2de5fVC5kDD9SljZuuWfFFefKHwiADxDmkvRxsI4dIC0j8ENjTuiGFJipHOw1x+/wDNh5Td",
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

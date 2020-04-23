@@ -1,0 +1,43 @@
+{
+  "uuid" : "232366c3-adb8-eead-9775-33c1ad1a412d",
+  "last_modified" : 1585400783181,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_dwh",
+  "tables" : [ "DEFAULT.KDN_PRODUCT_SUGGESTION_ITEM_BASED", "DEFAULT.KDN_PRODUCT_SUGGESTION_SALE_SPEED", "DEFAULT.KDN_PRODUCTS_30_DAYS", "DEFAULT.KDN_RETAILER_INDUSTRY", "DEFAULT.API_GET_RELEVANT_CATEGORIES", "DEFAULT.API_GET_RELEVANT_PRODUCTS", "DEFAULT.API_GET_TOP_SELLING_PRODUCTS", "DEFAULT.KDN_PRODUCTS", "DEFAULT.KDN_CATEGORIES", "DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE", "DEFAULT.KDN_PRODUCT_SUGGESTION", "DEFAULT.KDN_TMP_PRODUCTS", "DEFAULT.API_GET_OUT_OF_STOCK_PRODUCT", "DEFAULT.GET_RELEVANT_CATEGORIES" ],
+  "owner" : "ADMIN",
+  "status" : "ENABLED",
+  "create_time_utc" : 1582185685624,
+  "last_update_time" : null,
+  "description" : "uat kdn_dwh",
+  "realizations" : [ {
+    "type" : "CUBE",
+    "realization" : "kdn_product_suggestion"
+  }, {
+    "type" : "CUBE",
+    "realization" : "kdn_products"
+  }, {
+    "type" : "CUBE",
+    "realization" : "api_get_out_of_stock_product"
+  }, {
+    "type" : "CUBE",
+    "realization" : "api_get_top_selling_products"
+  }, {
+    "type" : "CUBE",
+    "realization" : "api_get_relevant_products_by_barcode"
+  }, {
+    "type" : "CUBE",
+    "realization" : "kdn_retailer_industry"
+  }, {
+    "type" : "CUBE",
+    "realization" : "api_get_relevant_products"
+  }, {
+    "type" : "CUBE",
+    "realization" : "api_get_relevant_categories"
+  }, {
+    "type" : "CUBE",
+    "realization" : "kdn_categories"
+  } ],
+  "models" : [ "kdn_product_suggestion", "kdn_products", "api_get_out_of_stock_product", "api_get_top_selling_products", "api_get_relevant_products_by_barcode", "kdn_retailer_industry", "api_get_relevant_products", "api_get_relevant_categories", "kdn_categories" ],
+  "ext_filters" : [ ],
+  "override_kylin_properties" : { }
+}

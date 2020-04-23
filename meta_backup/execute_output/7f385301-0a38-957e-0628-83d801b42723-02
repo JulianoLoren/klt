@@ -1,0 +1,14 @@
+{
+  "uuid" : "7f385301-0a38-957e-0628-83d801b42723-02",
+  "last_modified" : 1583301961340,
+  "version" : "3.0.0.20500",
+  "content" : null,
+  "status" : "DISCARDED",
+  "info" : {
+    "startTime" : "1583301738961",
+    "yarn_application_id" : "application_1581647538653_3094",
+    "mr_job_id" : "job_1581647538653_3094",
+    "yarn_application_tracking_url" : "http://ip-172-31-15-241.ap-east-1.compute.internal:8088/proxy/application_1581647538653_3094/",
+    "endTime" : "1583301961340"
+  }
+}

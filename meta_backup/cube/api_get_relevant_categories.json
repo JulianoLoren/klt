@@ -1,0 +1,78 @@
+{
+  "uuid" : "158b0a1c-46a4-ca01-4866-0fe5ddab3789",
+  "last_modified" : 1585192871822,
+  "version" : "3.0.0.20500",
+  "name" : "api_get_relevant_categories",
+  "owner" : "ADMIN",
+  "descriptor" : "api_get_relevant_categories",
+  "display_name" : "api_get_relevant_categories",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "d10590f4-2968-6c8f-5ddc-964bea4001f0",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_X5WMPPI23J",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 138417,
+    "input_records" : 240857,
+    "input_records_size" : 15395483,
+    "last_build_time" : 1585192871539,
+    "last_build_job_id" : "e43d6de0-02c1-d9f2-9232-9222b2969ee6",
+    "create_time_utc" : 1585191778082,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "API_GET_RELEVANT_CATEGORIES.SCORE" : "/dict/DEFAULT.API_GET_RELEVANT_CATEGORIES/SCORE/95a05d8d-ffa3-cedc-a542-2fa33a60f9b0.dict",
+      "API_GET_RELEVANT_CATEGORIES.EXPECTED_COMMON_USERS" : "/dict/DEFAULT.API_GET_RELEVANT_CATEGORIES/EXPECTED_COMMON_USERS/411114c9-c51a-45da-b723-24303c665201.dict",
+      "API_GET_RELEVANT_CATEGORIES.AVG_QUANTITY" : "/dict/DEFAULT.API_GET_RELEVANT_CATEGORIES/AVG_QUANTITY/3e488704-d183-9d28-2f3e-87254201003f.dict",
+      "API_GET_RELEVANT_CATEGORIES.AVG_REVENUE" : "/dict/DEFAULT.API_GET_RELEVANT_CATEGORIES/AVG_REVENUE/1539beaf-2602-00ae-69bc-44e3da4336f5.dict",
+      "API_GET_RELEVANT_CATEGORIES.RETAILER_ID" : "/dict/DEFAULT.API_GET_RELEVANT_CATEGORIES/RETAILER_ID/9ecc5536-8158-9aa6-da42-35e9760aace4.dict",
+      "API_GET_RELEVANT_CATEGORIES.RECOMMENDED_ITEM" : "/dict/DEFAULT.API_GET_RELEVANT_CATEGORIES/RECOMMENDED_ITEM/9d5bb81b-bde1-7935-e5ce-3bba38dc6d39.dict",
+      "API_GET_RELEVANT_CATEGORIES.COUNT_COMMON_USERS" : "/dict/DEFAULT.API_GET_RELEVANT_CATEGORIES/COUNT_COMMON_USERS/3fb48360-b3f7-acaa-a2af-57a25982d4da.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "API_GET_RELEVANT_CATEGORIES.AVG_QUANTITY", 60, 1 ], [ "API_GET_RELEVANT_CATEGORIES.RETAILER_ID", 4224, 2 ], [ "API_GET_RELEVANT_CATEGORIES.SCORE", 2129, 2 ], [ "API_GET_RELEVANT_CATEGORIES.AVG_REVENUE", 60, 1 ], [ "API_GET_RELEVANT_CATEGORIES.EXPECTED_COMMON_USERS", 1844, 2 ], [ "API_GET_RELEVANT_CATEGORIES.RECOMMENDED_ITEM", 60, 1 ], [ "API_GET_RELEVANT_CATEGORIES.COUNT_COMMON_USERS", 164, 1 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "API_GET_RELEVANT_CATEGORIES.SCORE" : {
+        "min" : "-106.2082",
+        "max" : "72.85065"
+      },
+      "API_GET_RELEVANT_CATEGORIES.EXPECTED_COMMON_USERS" : {
+        "min" : "2.7857",
+        "max" : "1323.28727"
+      },
+      "API_GET_RELEVANT_CATEGORIES.AVG_QUANTITY" : {
+        "min" : "9.388888889",
+        "max" : "5377.796939781"
+      },
+      "API_GET_RELEVANT_CATEGORIES.AVG_REVENUE" : {
+        "min" : "1011077.828571429",
+        "max" : "50856388.896491754"
+      },
+      "API_GET_RELEVANT_CATEGORIES.RETAILER_ID" : {
+        "min" : "4119",
+        "max" : "652137"
+      },
+      "API_GET_RELEVANT_CATEGORIES.RECOMMENDED_ITEM" : {
+        "min" : "4",
+        "max" : "176"
+      },
+      "API_GET_RELEVANT_CATEGORIES.COUNT_COMMON_USERS" : {
+        "min" : "6",
+        "max" : "969"
+      }
+    }
+  } ],
+  "create_time_utc" : 1585191772674,
+  "cuboid_bytes" : null,
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

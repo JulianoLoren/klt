@@ -1,0 +1,11 @@
+{
+  "uuid" : "fa28aa1d-2f68-e986-d814-c9e11fa6f984-18",
+  "last_modified" : 1585017601941,
+  "version" : "3.0.0.20500",
+  "content" : "Hive table default.kylin_intermediate_api_get_relevant_products_586c300e_5276_cdb5_00e6_122b8b8f317c is dropped. \nPath [hdfs://localhost:9000/kylin/kylin_metadata/kylin-fa28aa1d-2f68-e986-d814-c9e11fa6f984/kylin_intermediate_api_get_relevant_products_586c300e_5276_cdb5_00e6_122b8b8f317c] is deleted. \n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1585017593793",
+    "endTime" : "1585017601930"
+  }
+}

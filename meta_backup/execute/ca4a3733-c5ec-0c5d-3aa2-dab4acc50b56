@@ -1,0 +1,42 @@
+{
+  "uuid" : "ca4a3733-c5ec-0c5d-3aa2-dab4acc50b56",
+  "last_modified" : 1584409573620,
+  "version" : "3.0.0.20500",
+  "name" : "Hive Column Cardinality calculation for table 'DEFAULT.KDN_PRODUCTS'",
+  "tasks" : [ {
+    "uuid" : "ca4a3733-c5ec-0c5d-3aa2-dab4acc50b56-00",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : "-table DEFAULT.KDN_PRODUCTS -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/ca4a3733-c5ec-0c5d-3aa2-dab4acc50b56/DEFAULT.KDN_PRODUCTS -project kdn_dwh",
+      "segmentId" : "DEFAULT.KDN_PRODUCTS",
+      "MR_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "ca4a3733-c5ec-0c5d-3aa2-dab4acc50b56-01",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "segmentId" : "DEFAULT.KDN_PRODUCTS",
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityUpdateJob",
+      "HADOOP_SHELL_JOB_PARAMS" : "-table DEFAULT.KDN_PRODUCTS -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/ca4a3733-c5ec-0c5d-3aa2-dab4acc50b56/DEFAULT.KDN_PRODUCTS -project kdn_dwh"
+    },
+    "priority" : 10
+  } ],
+  "tasks_check" : null,
+  "type" : "org.apache.kylin.job.execution.DefaultChainedExecutable",
+  "params" : {
+    "submitter" : "ADMIN",
+    "segmentId" : "DEFAULT.KDN_PRODUCTS"
+  },
+  "priority" : 10
+}

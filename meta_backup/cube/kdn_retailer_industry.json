@@ -1,0 +1,53 @@
+{
+  "uuid" : "8ff94f8e-1809-c6e6-aab5-15483e85b48d",
+  "last_modified" : 1585340416568,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_retailer_industry",
+  "owner" : "ADMIN",
+  "descriptor" : "kdn_retailer_industry",
+  "display_name" : "kdn_retailer_industry",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "266a14dc-93b4-6676-460b-9b55bf1a47e4",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_ZT4K6YKNDF",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 56,
+    "input_records" : 4053,
+    "input_records_size" : 36337,
+    "last_build_time" : 1585340416530,
+    "last_build_job_id" : "18503cd5-7c93-1aef-a51c-d8f4eb5fdddd",
+    "create_time_utc" : 1585339900118,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "KDN_RETAILER_INDUSTRY.RETAILER_ID" : "/dict/DEFAULT.KDN_RETAILER_INDUSTRY/RETAILER_ID/8540eda6-c157-ad3e-8e2a-a65cfc8c370e.dict",
+      "KDN_RETAILER_INDUSTRY.INDUSTRY" : "/dict/DEFAULT.KDN_RETAILER_INDUSTRY/INDUSTRY/5517bd26-a4eb-d24a-e069-8a37cde2231a.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "KDN_RETAILER_INDUSTRY.INDUSTRY", 1, 1 ], [ "KDN_RETAILER_INDUSTRY.RETAILER_ID", 4053, 2 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "KDN_RETAILER_INDUSTRY.RETAILER_ID" : {
+        "min" : "4119",
+        "max" : "654959"
+      },
+      "KDN_RETAILER_INDUSTRY.INDUSTRY" : {
+        "min" : "2",
+        "max" : "2"
+      }
+    }
+  } ],
+  "create_time_utc" : 1584504342244,
+  "cuboid_bytes" : null,
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

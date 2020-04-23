@@ -1,0 +1,18 @@
+{
+  "uuid" : "e43d6de0-02c1-d9f2-9232-9222b2969ee6-07",
+  "last_modified" : 1585192573345,
+  "version" : "3.0.0.20500",
+  "content" : "Counters: 50\n\tFile System Counters\n\t\tFILE: Number of bytes read=6915512\n\t\tFILE: Number of bytes written=14080223\n\t\tFILE: Number of read operations=0\n\t\tFILE: Number of large read operations=0\n\t\tFILE: Number of write operations=0\n\t\tHDFS: Number of bytes read=1207970\n\t\tHDFS: Number of bytes written=6753524\n\t\tHDFS: Number of read operations=7\n\t\tHDFS: Number of large read operations=0\n\t\tHDFS: Number of write operations=2\n\tJob Counters \n\t\tLaunched map tasks=1\n\t\tLaunched reduce tasks=1\n\t\tData-local map tasks=1\n\t\tTotal time spent by all maps in occupied slots (ms)=8447\n\t\tTotal time spent by all reduces in occupied slots (ms)=5342\n\t\tTotal time spent by all map tasks (ms)=8447\n\t\tTotal time spent by all reduce tasks (ms)=5342\n\t\tTotal vcore-seconds taken by all map tasks=8447\n\t\tTotal vcore-seconds taken by all reduce tasks=5342\n\t\tTotal megabyte-seconds taken by all map tasks=8649728\n\t\tTotal megabyte-seconds taken by all reduce tasks=5470208\n\tMap-Reduce Framework\n\t\tMap input records=240857\n\t\tMap output records=1685999\n\t\tMap output bytes=36369407\n\t\tMap output materialized bytes=6915512\n\t\tInput split bytes=217\n\t\tCombine input records=1685999\n\t\tCombine output records=1466812\n\t\tReduce input groups=1466812\n\t\tReduce shuffle bytes=6915512\n\t\tReduce input records=1466812\n\t\tReduce output records=1466812\n\t\tSpilled Records=2933624\n\t\tShuffled Maps =1\n\t\tFailed Shuffles=0\n\t\tMerged Map outputs=1\n\t\tGC time elapsed (ms)=176\n\t\tCPU time spent (ms)=17280\n\t\tPhysical memory (bytes) snapshot=566124544\n\t\tVirtual memory (bytes) snapshot=4292313088\n\t\tTotal committed heap usage (bytes)=328204288\n\tCube Builder\n\t\tProcessed records=240857\n\tShuffle Errors\n\t\tBAD_ID=0\n\t\tCONNECTION=0\n\t\tIO_ERROR=0\n\t\tWRONG_LENGTH=0\n\t\tWRONG_MAP=0\n\t\tWRONG_REDUCE=0\n\tFile Input Format Counters \n\t\tBytes Read=1207753\n\tFile Output Format Counters \n\t\tBytes Written=6753524\n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1585192538420",
+    "yarn_application_id" : "application_1584339967426_2974",
+    "mr_job_id" : "job_1584339967426_2974",
+    "yarn_application_tracking_url" : "ip-172-31-15-241.ap-east-1.compute.internal:19888/jobhistory/job/job_1584339967426_2974",
+    "mapReduceWaitTime" : "11775",
+    "hdfs_bytes_written" : "6753524",
+    "source_records_count" : "240857",
+    "source_records_size" : "0",
+    "endTime" : "1585192573344"
+  }
+}

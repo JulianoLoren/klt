@@ -1,0 +1,42 @@
+{
+  "uuid" : "bfc4e210-dce2-d594-2b2b-134ad6baef5f",
+  "last_modified" : 1584504111536,
+  "version" : "3.0.0.20500",
+  "name" : "Hive Column Cardinality calculation for table 'DEFAULT.RETAILER_INDUSTRY'",
+  "tasks" : [ {
+    "uuid" : "bfc4e210-dce2-d594-2b2b-134ad6baef5f-00",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : "-table DEFAULT.RETAILER_INDUSTRY -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/bfc4e210-dce2-d594-2b2b-134ad6baef5f/DEFAULT.RETAILER_INDUSTRY -project kdn_dwh",
+      "segmentId" : "DEFAULT.RETAILER_INDUSTRY",
+      "MR_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "bfc4e210-dce2-d594-2b2b-134ad6baef5f-01",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "segmentId" : "DEFAULT.RETAILER_INDUSTRY",
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityUpdateJob",
+      "HADOOP_SHELL_JOB_PARAMS" : "-table DEFAULT.RETAILER_INDUSTRY -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/bfc4e210-dce2-d594-2b2b-134ad6baef5f/DEFAULT.RETAILER_INDUSTRY -project kdn_dwh"
+    },
+    "priority" : 10
+  } ],
+  "tasks_check" : null,
+  "type" : "org.apache.kylin.job.execution.DefaultChainedExecutable",
+  "params" : {
+    "submitter" : "ADMIN",
+    "segmentId" : "DEFAULT.RETAILER_INDUSTRY"
+  },
+  "priority" : 10
+}

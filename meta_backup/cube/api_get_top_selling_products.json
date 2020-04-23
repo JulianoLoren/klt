@@ -1,0 +1,63 @@
+{
+  "uuid" : "670e4f05-4fb4-5e61-10be-67e5b413c76a",
+  "last_modified" : 1584431073769,
+  "version" : "3.0.0.20500",
+  "name" : "api_get_top_selling_products",
+  "owner" : "ADMIN",
+  "descriptor" : "api_get_top_selling_products",
+  "display_name" : "api_get_top_selling_products",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "549cbb2d-17b5-2463-4eea-286dd5bb0a32",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_TL5QORUNOD",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 1689,
+    "input_records" : 14765,
+    "input_records_size" : 942329,
+    "last_build_time" : 1584431073674,
+    "last_build_job_id" : "d50c6cee-2499-963c-ab58-dd9b1e57609d",
+    "create_time_utc" : 1584430775931,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "API_GET_TOP_SELLING_PRODUCTS.BARCODE" : "/dict/DEFAULT.API_GET_TOP_SELLING_PRODUCTS/BARCODE/c542fdc4-c363-027e-d9ec-1e935c503436.dict",
+      "API_GET_TOP_SELLING_PRODUCTS.AVG_REVENUE" : "/dict/DEFAULT.API_GET_TOP_SELLING_PRODUCTS/AVG_REVENUE/26f90890-2bac-4c32-0842-2e083527eda5.dict",
+      "API_GET_TOP_SELLING_PRODUCTS.NAME" : "/dict/DEFAULT.API_GET_TOP_SELLING_PRODUCTS/NAME/64db7b3e-a837-52c1-7906-0ab9ec6ba97d.dict",
+      "API_GET_TOP_SELLING_PRODUCTS.AVG_QUANTITY" : "/dict/DEFAULT.API_GET_TOP_SELLING_PRODUCTS/AVG_QUANTITY/b3aaa13a-8758-f261-ea16-ba582348213a.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "API_GET_TOP_SELLING_PRODUCTS.AVG_REVENUE", 9418, 2 ], [ "API_GET_TOP_SELLING_PRODUCTS.NAME", 14599, 2 ], [ "API_GET_TOP_SELLING_PRODUCTS.BARCODE", 14765, 2 ], [ "API_GET_TOP_SELLING_PRODUCTS.AVG_QUANTITY", 3655, 2 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "API_GET_TOP_SELLING_PRODUCTS.BARCODE" : {
+        "min" : "000000000007",
+        "max" : "999999999999"
+      },
+      "API_GET_TOP_SELLING_PRODUCTS.AVG_REVENUE" : {
+        "min" : "10005000",
+        "max" : "16679590331.666666667"
+      },
+      "API_GET_TOP_SELLING_PRODUCTS.NAME" : {
+        "min" : " Son Christian Louboutin 'Just Nothing'",
+        "max" : "️Viên dưỡng da MULTI VITA AMPOULE COLLAGEN"
+      },
+      "API_GET_TOP_SELLING_PRODUCTS.AVG_QUANTITY" : {
+        "min" : "1",
+        "max" : "1000110"
+      }
+    }
+  } ],
+  "create_time_utc" : 1584430772096,
+  "cuboid_bytes" : null,
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

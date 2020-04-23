@@ -1,0 +1,42 @@
+{
+  "uuid" : "90b66f2b-0ec0-69af-8229-be49f5006e32",
+  "last_modified" : 1584427403792,
+  "version" : "3.0.0.20500",
+  "name" : "Hive Column Cardinality calculation for table 'DEFAULT.API_GET_TOP_SELLING_PRODUCTS'",
+  "tasks" : [ {
+    "uuid" : "90b66f2b-0ec0-69af-8229-be49f5006e32-00",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : "-table DEFAULT.API_GET_TOP_SELLING_PRODUCTS -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/90b66f2b-0ec0-69af-8229-be49f5006e32/DEFAULT.API_GET_TOP_SELLING_PRODUCTS -project kdn_dwh",
+      "segmentId" : "DEFAULT.API_GET_TOP_SELLING_PRODUCTS",
+      "MR_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "90b66f2b-0ec0-69af-8229-be49f5006e32-01",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : null,
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "segmentId" : "DEFAULT.API_GET_TOP_SELLING_PRODUCTS",
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.source.hive.cardinality.HiveColumnCardinalityUpdateJob",
+      "HADOOP_SHELL_JOB_PARAMS" : "-table DEFAULT.API_GET_TOP_SELLING_PRODUCTS -output hdfs://localhost:9000/kylin/kylin_metadata/cardinality/90b66f2b-0ec0-69af-8229-be49f5006e32/DEFAULT.API_GET_TOP_SELLING_PRODUCTS -project kdn_dwh"
+    },
+    "priority" : 10
+  } ],
+  "tasks_check" : null,
+  "type" : "org.apache.kylin.job.execution.DefaultChainedExecutable",
+  "params" : {
+    "submitter" : "ADMIN",
+    "segmentId" : "DEFAULT.API_GET_TOP_SELLING_PRODUCTS"
+  },
+  "priority" : 10
+}

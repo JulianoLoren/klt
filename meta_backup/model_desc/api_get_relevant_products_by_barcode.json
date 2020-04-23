@@ -1,0 +1,27 @@
+{
+  "uuid" : "e4f72c53-5b6b-3317-28cb-0ac4734af1a3",
+  "last_modified" : 1584432326507,
+  "version" : "3.0.0.20500",
+  "name" : "api_get_relevant_products_by_barcode",
+  "owner" : "ADMIN",
+  "is_draft" : false,
+  "description" : "",
+  "fact_table" : "DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE",
+  "lookups" : [ ],
+  "dimensions" : [ {
+    "table" : "API_GET_RELEVANT_PRODUCTS_BY_BARCODE",
+    "columns" : [ "ITEM", "NAME", "RECOMMENDED_ITEM", "RECOMMENDED_ITEM_NAME", "AVG_QUANTITY", "AVG_REVENUE", "COUNT_COMMON_USERS", "EXPECTED_COMMON_USERS", "SCORE" ]
+  } ],
+  "metrics" : [ ],
+  "filter_condition" : "",
+  "partition_desc" : {
+    "partition_date_column" : null,
+    "partition_time_column" : null,
+    "partition_date_start" : 0,
+    "partition_date_format" : "yyyy-MM-dd",
+    "partition_time_format" : "HH:mm:ss",
+    "partition_type" : "APPEND",
+    "partition_condition_builder" : "org.apache.kylin.metadata.model.PartitionDesc$DefaultPartitionConditionBuilder"
+  },
+  "capacity" : "MEDIUM"
+}

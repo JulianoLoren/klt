@@ -1,0 +1,11 @@
+{
+  "uuid" : "b5aad469-df3a-650d-ea85-b9e955998f7b-23",
+  "last_modified" : 1584420794857,
+  "version" : "3.0.0.20500",
+  "content" : "Drop HDFS path on FileSystem: \"hdfs://localhost:9000\" \nHDFS path /kylin/kylin_metadata/kylin-b5aad469-df3a-650d-ea85-b9e955998f7b/api_get_out_of_stock_product/fact_distinct_columns is dropped.\nHDFS path /kylin/kylin_metadata/kylin-b5aad469-df3a-650d-ea85-b9e955998f7b/api_get_out_of_stock_product/hfile is dropped.\nHDFS path /kylin/kylin_metadata/kylin-b5aad469-df3a-650d-ea85-b9e955998f7b/api_get_out_of_stock_product/dictionary_shrunken not exists.\n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1584420794529",
+    "endTime" : "1584420794811"
+  }
+}

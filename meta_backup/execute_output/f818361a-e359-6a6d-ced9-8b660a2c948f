@@ -1,0 +1,12 @@
+{
+  "uuid" : "f818361a-e359-6a6d-ced9-8b660a2c948f",
+  "last_modified" : 1583483620191,
+  "version" : "3.0.0.20500",
+  "content" : null,
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1583483608138",
+    "buildInstance" : "16021@ip-172-31-15-241.ap-east-1.compute.internal",
+    "endTime" : "1583483620190"
+  }
+}

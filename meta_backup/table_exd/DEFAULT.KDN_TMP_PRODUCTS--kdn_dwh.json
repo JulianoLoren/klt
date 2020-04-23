@@ -1,0 +1,46 @@
+{
+  "uuid" : "7dd60f7c-55cd-7c0d-fde5-25f981684fd2",
+  "last_modified" : 1584409682524,
+  "version" : "3.0.0.20500",
+  "table_name" : "DEFAULT.KDN_TMP_PRODUCTS",
+  "last_build_job_id" : "1f7f66bd-3b39-34e7-ec15-66c0e184e7c9",
+  "frequency" : 0,
+  "columns_stats" : [ {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 4,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 4,
+    "data_skew_samples" : { }
+  } ],
+  "sample_rows" : [ ],
+  "last_modified_time" : 0,
+  "total_rows" : 0,
+  "mapper_rows" : [ ],
+  "data_source_properties" : {
+    "owner" : "root",
+    "skip_header_line_count" : "1",
+    "total_file_size" : "227",
+    "hive_inputFormat" : "org.apache.hadoop.mapred.TextInputFormat",
+    "hive_outputFormat" : "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+    "location" : "hdfs://localhost:9000/user/hive/warehouse/kdn_tmp_products",
+    "partition_column" : "",
+    "total_file_number" : "1",
+    "last_access_time" : "0"
+  }
+}

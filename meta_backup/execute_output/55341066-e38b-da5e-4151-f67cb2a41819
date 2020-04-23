@@ -1,0 +1,15 @@
+{
+  "uuid" : "55341066-e38b-da5e-4151-f67cb2a41819",
+  "last_modified" : 1581928597067,
+  "version" : "3.0.0.20500",
+  "content" : "killed by admin",
+  "status" : "DISCARDED",
+  "info" : {
+    "startTime" : "1581654718120",
+    "mapReduceWaitTime" : "5078808",
+    "buildInstance" : "16021@ip-172-31-15-241.ap-east-1.compute.internal",
+    "algorithm" : "LAYER",
+    "interruptTime" : "880286",
+    "endTime" : "1581665276385"
+  }
+}

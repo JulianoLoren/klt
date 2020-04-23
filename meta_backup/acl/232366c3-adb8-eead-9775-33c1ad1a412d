@@ -1,0 +1,1 @@
+{"uuid":"7e9d442a-915d-3843-a23a-d5913b1f3ad8","last_modified":1582185685629,"version":"3.0.0.20500","domainObjectInfo":{"type":"org.apache.kylin.metadata.project.ProjectInstance","id":"232366c3-adb8-eead-9775-33c1ad1a412d"},"parentDomainObjectInfo":null,"ownerInfo":{"sid":"ADMIN","principal":true},"entriesInheriting":false,"entries":[{"p":"ADMIN","m":16}]}

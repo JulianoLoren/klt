@@ -1,0 +1,14 @@
+{
+  "uuid" : "fda22164-ef34-31d6-a55c-809efae0cf50",
+  "last_modified" : 1583392617241,
+  "version" : "3.0.0.20500",
+  "content" : null,
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1583390248123",
+    "buildInstance" : "16021@ip-172-31-15-241.ap-east-1.compute.internal",
+    "mapReduceWaitTime" : "933268",
+    "algorithm" : "INMEM",
+    "endTime" : "1583392617240"
+  }
+}

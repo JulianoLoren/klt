@@ -1,0 +1,90 @@
+{
+  "uuid" : "27d136f3-7ef2-fd59-8900-aa109b75af54",
+  "last_modified" : 1583483593325,
+  "version" : "3.0.0.20500",
+  "name" : "KDN_PRODUCT_SUGGESTION",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "BUSINESS_DATE",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "2",
+    "name" : "RETAILER_KEY",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "3",
+    "name" : "PRODUCT_KEY",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "4",
+    "name" : "CODE",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "5",
+    "name" : "NAME",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "6",
+    "name" : "DAILY_SALE_30",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "7",
+    "name" : "DAILY_SALE_20",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "8",
+    "name" : "DAILY_SALE_15",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "9",
+    "name" : "DAILY_SALE_10",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "10",
+    "name" : "DAILY_SALE_5",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "11",
+    "name" : "DAILY_SALE_1",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "12",
+    "name" : "QUANTITY_30_DAYS",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "13",
+    "name" : "REVENUE_30_DAYS",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "14",
+    "name" : "ENDING_STOCKS",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "15",
+    "name" : "INVOICE_FROM",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  }, {
+    "id" : "16",
+    "name" : "PREDICT_7",
+    "datatype" : "varchar(256)",
+    "comment" : "from deserializer"
+  } ],
+  "source_type" : 0,
+  "table_type" : "MANAGED_TABLE",
+  "database" : "DEFAULT"
+}

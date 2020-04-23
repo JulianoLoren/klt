@@ -1,0 +1,218 @@
+{
+  "uuid" : "7f867c37-5f91-1a13-b47d-ff5517d88ec3",
+  "last_modified" : 1584418250519,
+  "version" : "3.0.0.20500",
+  "name" : "api_get_out_of_stock_product",
+  "is_draft" : false,
+  "model_name" : "api_get_out_of_stock_product",
+  "description" : "",
+  "null_string" : null,
+  "dimensions" : [ {
+    "name" : "BUSINESS_DATE",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "BUSINESS_DATE",
+    "derived" : null
+  }, {
+    "name" : "RETAILER_ID",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "RETAILER_ID",
+    "derived" : null
+  }, {
+    "name" : "PRODUCT_ID",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "PRODUCT_ID",
+    "derived" : null
+  }, {
+    "name" : "BARCODE",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "BARCODE",
+    "derived" : null
+  }, {
+    "name" : "NAME",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "NAME",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_30",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "DAILY_SALE_30",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_20",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "DAILY_SALE_20",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_15",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "DAILY_SALE_15",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_10",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "DAILY_SALE_10",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_5",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "DAILY_SALE_5",
+    "derived" : null
+  }, {
+    "name" : "DAILY_SALE_1",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "DAILY_SALE_1",
+    "derived" : null
+  }, {
+    "name" : "QUANTITY_30_DAYS",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "QUANTITY_30_DAYS",
+    "derived" : null
+  }, {
+    "name" : "REVENUE_30_DAYS",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "REVENUE_30_DAYS",
+    "derived" : null
+  }, {
+    "name" : "ENDING_STOCKS",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "ENDING_STOCKS",
+    "derived" : null
+  }, {
+    "name" : "INVOICE_FROM",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "INVOICE_FROM",
+    "derived" : null
+  }, {
+    "name" : "PREDICT_7",
+    "table" : "API_GET_OUT_OF_STOCK_PRODUCT",
+    "column" : "PREDICT_7",
+    "derived" : null
+  } ],
+  "measures" : [ {
+    "name" : "_COUNT_",
+    "function" : {
+      "expression" : "COUNT",
+      "parameter" : {
+        "type" : "constant",
+        "value" : "1"
+      },
+      "returntype" : "bigint"
+    }
+  } ],
+  "dictionaries" : [ ],
+  "rowkey" : {
+    "rowkey_columns" : [ {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.BUSINESS_DATE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.RETAILER_ID",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.PRODUCT_ID",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.BARCODE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.NAME",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_30",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_20",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_15",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_10",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_5",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_1",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.QUANTITY_30_DAYS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.REVENUE_30_DAYS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.ENDING_STOCKS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.INVOICE_FROM",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_OUT_OF_STOCK_PRODUCT.PREDICT_7",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    } ]
+  },
+  "hbase_mapping" : {
+    "column_family" : [ {
+      "name" : "F1",
+      "columns" : [ {
+        "qualifier" : "M",
+        "measure_refs" : [ "_COUNT_" ]
+      } ]
+    } ]
+  },
+  "aggregation_groups" : [ {
+    "includes" : [ "API_GET_OUT_OF_STOCK_PRODUCT.BUSINESS_DATE", "API_GET_OUT_OF_STOCK_PRODUCT.RETAILER_ID", "API_GET_OUT_OF_STOCK_PRODUCT.PRODUCT_ID", "API_GET_OUT_OF_STOCK_PRODUCT.BARCODE", "API_GET_OUT_OF_STOCK_PRODUCT.NAME", "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_30", "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_20", "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_15", "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_10", "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_5", "API_GET_OUT_OF_STOCK_PRODUCT.DAILY_SALE_1", "API_GET_OUT_OF_STOCK_PRODUCT.QUANTITY_30_DAYS", "API_GET_OUT_OF_STOCK_PRODUCT.REVENUE_30_DAYS", "API_GET_OUT_OF_STOCK_PRODUCT.ENDING_STOCKS", "API_GET_OUT_OF_STOCK_PRODUCT.INVOICE_FROM", "API_GET_OUT_OF_STOCK_PRODUCT.PREDICT_7" ],
+    "select_rule" : {
+      "hierarchy_dims" : [ ],
+      "mandatory_dims" : [ ],
+      "joint_dims" : [ [ "API_GET_OUT_OF_STOCK_PRODUCT.QUANTITY_30_DAYS", "API_GET_OUT_OF_STOCK_PRODUCT.REVENUE_30_DAYS", "API_GET_OUT_OF_STOCK_PRODUCT.ENDING_STOCKS", "API_GET_OUT_OF_STOCK_PRODUCT.INVOICE_FROM", "API_GET_OUT_OF_STOCK_PRODUCT.PREDICT_7" ] ]
+    }
+  } ],
+  "signature" : "VRv2FI2brq2XE5JiU4DhEw==",
+  "notify_list" : [ ],
+  "status_need_notify" : [ "ERROR", "DISCARDED", "SUCCEED" ],
+  "partition_date_start" : 0,
+  "partition_date_end" : 3153600000000,
+  "auto_merge_time_ranges" : [ 604800000, 2419200000 ],
+  "volatile_range" : 0,
+  "retention_range" : 0,
+  "engine_type" : 2,
+  "storage_type" : 2,
+  "override_kylin_properties" : { },
+  "cuboid_black_list" : [ ],
+  "parent_forward" : 3,
+  "mandatory_dimension_set_list" : [ ],
+  "snapshot_table_desc_list" : [ ]
+}

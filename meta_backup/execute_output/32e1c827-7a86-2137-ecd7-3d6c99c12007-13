@@ -1,0 +1,11 @@
+{
+  "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-13",
+  "last_modified" : 1581996594849,
+  "version" : "3.0.0.20500",
+  "content" : "Hive table default.kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221 is dropped. \nPath [hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221] is deleted. \n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1581996587820",
+    "endTime" : "1581996594847"
+  }
+}

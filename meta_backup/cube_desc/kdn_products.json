@@ -1,0 +1,138 @@
+{
+  "uuid" : "37ea4321-84df-6b30-8edd-e0f1c357f82d",
+  "last_modified" : 1584415203998,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_products",
+  "is_draft" : false,
+  "model_name" : "kdn_products",
+  "description" : "",
+  "null_string" : null,
+  "dimensions" : [ {
+    "name" : "RETAILER_ID",
+    "table" : "KDN_PRODUCTS",
+    "column" : "RETAILER_ID",
+    "derived" : null
+  }, {
+    "name" : "BARCODE",
+    "table" : "KDN_PRODUCTS",
+    "column" : "BARCODE",
+    "derived" : null
+  }, {
+    "name" : "QUANTITY",
+    "table" : "KDN_PRODUCTS",
+    "column" : "QUANTITY",
+    "derived" : null
+  }, {
+    "name" : "REVENUE",
+    "table" : "KDN_PRODUCTS",
+    "column" : "REVENUE",
+    "derived" : null
+  } ],
+  "measures" : [ {
+    "name" : "_COUNT_",
+    "function" : {
+      "expression" : "COUNT",
+      "parameter" : {
+        "type" : "constant",
+        "value" : "1"
+      },
+      "returntype" : "bigint"
+    }
+  }, {
+    "name" : "SUM_QUANTITY",
+    "function" : {
+      "expression" : "SUM",
+      "parameter" : {
+        "type" : "column",
+        "value" : "KDN_PRODUCTS.QUANTITY"
+      },
+      "returntype" : "decimal(18,5)"
+    }
+  }, {
+    "name" : "COUNT_QUANTITY",
+    "function" : {
+      "expression" : "COUNT",
+      "parameter" : {
+        "type" : "column",
+        "value" : "KDN_PRODUCTS.QUANTITY"
+      },
+      "returntype" : "bigint"
+    }
+  }, {
+    "name" : "COUNT_REVENUE",
+    "function" : {
+      "expression" : "COUNT",
+      "parameter" : {
+        "type" : "column",
+        "value" : "KDN_PRODUCTS.REVENUE"
+      },
+      "returntype" : "bigint"
+    }
+  }, {
+    "name" : "SUM_REVENUE",
+    "function" : {
+      "expression" : "SUM",
+      "parameter" : {
+        "type" : "column",
+        "value" : "KDN_PRODUCTS.REVENUE"
+      },
+      "returntype" : "decimal(18,5)"
+    }
+  } ],
+  "dictionaries" : [ ],
+  "rowkey" : {
+    "rowkey_columns" : [ {
+      "column" : "KDN_PRODUCTS.RETAILER_ID",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCTS.BARCODE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCTS.QUANTITY",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_PRODUCTS.REVENUE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    } ]
+  },
+  "hbase_mapping" : {
+    "column_family" : [ {
+      "name" : "F1",
+      "columns" : [ {
+        "qualifier" : "M",
+        "measure_refs" : [ "_COUNT_", "SUM_QUANTITY", "COUNT_QUANTITY", "COUNT_REVENUE", "SUM_REVENUE" ]
+      } ]
+    } ]
+  },
+  "aggregation_groups" : [ {
+    "includes" : [ "KDN_PRODUCTS.RETAILER_ID", "KDN_PRODUCTS.BARCODE", "KDN_PRODUCTS.QUANTITY", "KDN_PRODUCTS.REVENUE" ],
+    "select_rule" : {
+      "hierarchy_dims" : [ ],
+      "mandatory_dims" : [ ],
+      "joint_dims" : [ ]
+    }
+  } ],
+  "signature" : "i8VEIxdYzCE9UTvWi6FLeA==",
+  "notify_list" : [ ],
+  "status_need_notify" : [ "ERROR", "DISCARDED", "SUCCEED" ],
+  "partition_date_start" : 0,
+  "partition_date_end" : 3153600000000,
+  "auto_merge_time_ranges" : [ 604800000, 2419200000 ],
+  "volatile_range" : 0,
+  "retention_range" : 0,
+  "engine_type" : 2,
+  "storage_type" : 2,
+  "override_kylin_properties" : { },
+  "cuboid_black_list" : [ ],
+  "parent_forward" : 3,
+  "mandatory_dimension_set_list" : [ ],
+  "snapshot_table_desc_list" : [ ]
+}

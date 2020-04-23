@@ -1,0 +1,11 @@
+{
+  "uuid" : "7102ebb4-394d-0da4-a85f-a8ff26ac0e5d-01",
+  "last_modified" : 1585125763148,
+  "version" : "3.0.0.20500",
+  "content" : "Row count is 0, no need to redistribute",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1585125763028",
+    "endTime" : "1585125763140"
+  }
+}

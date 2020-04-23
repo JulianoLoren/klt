@@ -1,0 +1,17 @@
+{
+  "username" : "ANALYST",
+  "password" : "$2a$10$s4INO3XHjPP5Vm2xH027Ce9QeXWdrfq5pvzuGr9z/lQmHqi0rsbNi",
+  "authorities" : [ {
+    "authority" : "ROLE_ANALYST"
+  }, {
+    "authority" : "ALL_USERS"
+  } ],
+  "disabled" : false,
+  "defaultPassword" : false,
+  "locked" : false,
+  "lockedTime" : 0,
+  "wrongTime" : 0,
+  "uuid" : "83516c88-5a6f-1487-ab89-3a902c55dfcd",
+  "last_modified" : 1581647606854,
+  "version" : "3.0.0.20500"
+}

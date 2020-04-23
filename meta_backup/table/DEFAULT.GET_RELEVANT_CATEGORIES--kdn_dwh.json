@@ -1,0 +1,38 @@
+{
+  "uuid" : "f4051c35-679e-1420-83fb-267207183337",
+  "last_modified" : 1585188930243,
+  "version" : "3.0.0.20500",
+  "name" : "GET_RELEVANT_CATEGORIES",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "RETAILER_ID",
+    "datatype" : "bigint"
+  }, {
+    "id" : "2",
+    "name" : "RECOMMENDED_ITEM",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "3",
+    "name" : "AVG_QUANTITY",
+    "datatype" : "decimal(22,9)"
+  }, {
+    "id" : "4",
+    "name" : "AVG_REVENUE",
+    "datatype" : "decimal(22,9)"
+  }, {
+    "id" : "5",
+    "name" : "COUNT_COMMON_USERS",
+    "datatype" : "bigint"
+  }, {
+    "id" : "6",
+    "name" : "EXPECTED_COMMON_USERS",
+    "datatype" : "decimal(18,5)"
+  }, {
+    "id" : "7",
+    "name" : "SCORE",
+    "datatype" : "decimal(18,5)"
+  } ],
+  "source_type" : 0,
+  "table_type" : "VIRTUAL_VIEW",
+  "database" : "DEFAULT"
+}

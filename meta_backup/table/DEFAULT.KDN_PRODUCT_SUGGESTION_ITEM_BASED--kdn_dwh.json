@@ -1,0 +1,30 @@
+{
+  "uuid" : "f1274440-85da-4ded-bd4e-32564a2df96e",
+  "last_modified" : 1584409573537,
+  "version" : "3.0.0.20500",
+  "name" : "KDN_PRODUCT_SUGGESTION_ITEM_BASED",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "ITEM",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "2",
+    "name" : "RECOMMENDED_ITEM",
+    "datatype" : "varchar(256)"
+  }, {
+    "id" : "3",
+    "name" : "COUNT_COMMON_USERS",
+    "datatype" : "bigint"
+  }, {
+    "id" : "4",
+    "name" : "EXPECTED_COMMON_USERS",
+    "datatype" : "decimal(18,5)"
+  }, {
+    "id" : "5",
+    "name" : "SCORE",
+    "datatype" : "decimal(18,5)"
+  } ],
+  "source_type" : 0,
+  "table_type" : "MANAGED_TABLE",
+  "database" : "DEFAULT"
+}

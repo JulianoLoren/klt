@@ -1,0 +1,88 @@
+{
+  "uuid" : "f4b90268-9c3f-3904-8bc5-e1f9a658c513",
+  "last_modified" : 1584432717484,
+  "version" : "3.0.0.20500",
+  "name" : "api_get_relevant_products_by_barcode",
+  "owner" : "ADMIN",
+  "descriptor" : "api_get_relevant_products_by_barcode",
+  "display_name" : "api_get_relevant_products_by_barcode",
+  "cost" : 50,
+  "status" : "READY",
+  "segments" : [ {
+    "uuid" : "c654f614-bf7e-ae7f-8974-70149b1808ac",
+    "name" : "FULL_BUILD",
+    "storage_location_identifier" : "KYLIN_2SE8NDCK7H",
+    "date_range_start" : 0,
+    "date_range_end" : 9223372036854775807,
+    "source_offset_start" : 0,
+    "source_offset_end" : 0,
+    "status" : "READY",
+    "size_kb" : 327,
+    "input_records" : 1740,
+    "input_records_size" : 230903,
+    "last_build_time" : 1584432717209,
+    "last_build_job_id" : "2d027fcf-27ab-6675-e149-f501a4bd0389",
+    "create_time_utc" : 1584432356057,
+    "cuboid_shard_nums" : { },
+    "total_shards" : 1,
+    "blackout_cuboids" : [ ],
+    "binary_signature" : null,
+    "dictionaries" : {
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.COUNT_COMMON_USERS" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/COUNT_COMMON_USERS/ac2f1025-bdbd-e6de-2dca-f67a64cf8eda.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.AVG_REVENUE" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/AVG_REVENUE/14823356-a887-b311-4e8f-a127ca225705.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.RECOMMENDED_ITEM" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/RECOMMENDED_ITEM/4633db47-6605-d862-a15b-50906cb3c5c5.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.AVG_QUANTITY" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/AVG_QUANTITY/1056e08c-b7d8-64ec-8fe0-31d027f100a1.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.EXPECTED_COMMON_USERS" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/EXPECTED_COMMON_USERS/6800c685-dbf0-de88-d39a-4bbbbd293966.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.NAME" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/NAME/b111e3fb-7bd2-02fa-7b76-51c559ef9db9.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.RECOMMENDED_ITEM_NAME" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/RECOMMENDED_ITEM_NAME/dfef9129-727d-401a-3be4-56ebcdcbd00e.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.SCORE" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/SCORE/473f62af-547d-e187-ac00-1165e2e001d0.dict",
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.ITEM" : "/dict/DEFAULT.API_GET_RELEVANT_PRODUCTS_BY_BARCODE/ITEM/f93f8ca5-a75e-4bf5-8a68-da0d0485ab6c.dict"
+    },
+    "snapshots" : null,
+    "rowkey_stats" : [ [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.COUNT_COMMON_USERS", 33, 1 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.AVG_QUANTITY", 136, 1 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.NAME", 133, 1 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.RECOMMENDED_ITEM", 136, 1 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.AVG_REVENUE", 136, 1 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.RECOMMENDED_ITEM_NAME", 133, 1 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.SCORE", 1628, 2 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.ITEM", 136, 1 ], [ "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.EXPECTED_COMMON_USERS", 1305, 2 ] ],
+    "stream_source_checkpoint" : null,
+    "dimension_range_info_map" : {
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.COUNT_COMMON_USERS" : {
+        "min" : "6",
+        "max" : "59"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.AVG_REVENUE" : {
+        "min" : "415473.684210526",
+        "max" : "64060875.7822"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.RECOMMENDED_ITEM" : {
+        "min" : "037000274018",
+        "max" : "9318637070510"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.AVG_QUANTITY" : {
+        "min" : "25.25",
+        "max" : "713.494845361"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.EXPECTED_COMMON_USERS" : {
+        "min" : "0.65421",
+        "max" : "104.00925"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.NAME" : {
+        "min" : "bông lily bell",
+        "max" : "\uD83C\uDF51"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.RECOMMENDED_ITEM_NAME" : {
+        "min" : "bông lily bell",
+        "max" : "\uD83C\uDF51"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.ITEM" : {
+        "min" : "037000274018",
+        "max" : "9318637070510"
+      },
+      "API_GET_RELEVANT_PRODUCTS_BY_BARCODE.SCORE" : {
+        "min" : "-23.56111",
+        "max" : "16.21376"
+      }
+    }
+  } ],
+  "create_time_utc" : 1584432347965,
+  "cuboid_bytes" : "eAE9jrkNwDAMA3dR7cL65awWZPdQCpDucCZp3eTMdHGmLmLZQM1FRpdCaAFGsIAidrsCeSEecOWIa79WCuj0WhiefWsPf53oHUbUd45F1mrQeZEYRjkVVvyvyTltbWqDAURsbP8W3uiBGs+C40Kbq9N6bFp6elYmys8LI6wuow==",
+  "cuboid_bytes_recommend" : null,
+  "cuboid_last_optimized" : 0,
+  "snapshots" : { }
+}

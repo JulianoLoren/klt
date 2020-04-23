@@ -1,0 +1,225 @@
+{
+  "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007",
+  "last_modified" : 1581996400243,
+  "version" : "3.0.0.20500",
+  "name" : "BUILD CUBE - retailers_selling_products_saothaiduong_demo - FULL_BUILD - UTC 2020-02-18 03:26:40",
+  "tasks" : [ {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-00",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Create Intermediate Flat Hive Table",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.source.hive.CreateFlatHiveTableStep",
+    "params" : {
+      "HiveInit" : "USE default;\n",
+      "HiveRedistributeData" : "DROP TABLE IF EXISTS kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221;\nCREATE EXTERNAL TABLE IF NOT EXISTS kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221\n(\n`RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_CODE` string\n,`RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_NAME` string\n,`RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_NUMBER_RETAILERS` int\n)\nSTORED AS SEQUENCEFILE\nLOCATION 'hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221';\nALTER TABLE kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221 SET TBLPROPERTIES('auto.purge'='true');\nINSERT OVERWRITE TABLE `kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221` SELECT\n`RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO`.`CODE` as `RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_CODE`\n,`RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO`.`NAME` as `RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_NAME`\n,`RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO`.`NUMBER_RETAILERS` as `RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_NUMBER_RETAILERS`\n FROM `DEFAULT`.`RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO` as `RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO`\nWHERE 1=1;\n",
+      "cubeName" : "retailers_selling_products_saothaiduong_demo"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-01",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Redistribute Flat Hive Table",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.source.hive.RedistributeFlatHiveTableStep",
+    "params" : {
+      "HiveInit" : "USE default;\n",
+      "HiveRedistributeData" : "INSERT OVERWRITE TABLE `kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221` SELECT * FROM `kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221` DISTRIBUTE BY RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_CODE,RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_NAME,RETAILERS_SELLING_PRODUCTS_SAOTHAIDUONG_DEMO_NUMBER_RETAILERS;\n",
+      "cubeName" : "retailers_selling_products_saothaiduong_demo",
+      "intermediateTable" : "kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-02",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Extract Fact Table Distinct Columns",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename retailers_selling_products_saothaiduong_demo -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/fact_distinct_columns -segmentid 5c5b5c46-2496-6aff-25d1-e9f919f17221 -statisticsoutput hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/fact_distinct_columns/statistics -statisticssamplingpercent 100 -jobname Kylin_Fact_Distinct_Columns_retailers_selling_products_saothaiduong_demo_Step -cubingJobId 32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "MR_COUNTER_SAVEAS" : "sourceRecordCount,sourceSizeBytes",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.FactDistinctColumnsJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-03",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build Dimension Dictionary",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.CreateDictionaryJob",
+      "HADOOP_SHELL_JOB_PARAMS" : " -cubename retailers_selling_products_saothaiduong_demo -segmentid 5c5b5c46-2496-6aff-25d1-e9f919f17221 -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/fact_distinct_columns -dictPath hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/dict -cubingJobId 32e1c827-7a86-2137-ecd7-3d6c99c12007"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-04",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Save Cuboid Statistics",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.steps.SaveStatisticsStep",
+    "params" : {
+      "cubingJobId" : "32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "segmentId" : "5c5b5c46-2496-6aff-25d1-e9f919f17221",
+      "statisticsPath" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/fact_distinct_columns/statistics",
+      "cubeName" : "retailers_selling_products_saothaiduong_demo"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-05",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Create HTable",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.storage.hbase.steps.CreateHTableJob",
+      "HADOOP_SHELL_JOB_PARAMS" : " -cubename retailers_selling_products_saothaiduong_demo -segmentid 5c5b5c46-2496-6aff-25d1-e9f919f17221 -partitions hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/rowkey_stats/part-r-00000 -cuboidMode CURRENT -hbaseConfPath hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/hbase-conf.xml"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-06",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build Base Cuboid",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename retailers_selling_products_saothaiduong_demo -segmentid 5c5b5c46-2496-6aff-25d1-e9f919f17221 -input FLAT_TABLE -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/cuboid/level_base_cuboid -jobname Kylin_Base_Cuboid_Builder_retailers_selling_products_saothaiduong_demo -level 0 -cubingJobId 32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.BaseCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-07",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 1",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename retailers_selling_products_saothaiduong_demo -segmentid 5c5b5c46-2496-6aff-25d1-e9f919f17221 -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/cuboid/level_base_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/cuboid/level_1_cuboid -jobname Kylin_ND-Cuboid_Builder_retailers_selling_products_saothaiduong_demo_Step -level 1 -cubingJobId 32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-08",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 2",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename retailers_selling_products_saothaiduong_demo -segmentid 5c5b5c46-2496-6aff-25d1-e9f919f17221 -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/cuboid/level_1_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/cuboid/level_2_cuboid -jobname Kylin_ND-Cuboid_Builder_retailers_selling_products_saothaiduong_demo_Step -level 2 -cubingJobId 32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-09",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build Cube In-Mem",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf_inmem.xml -cubename retailers_selling_products_saothaiduong_demo -segmentid 5c5b5c46-2496-6aff-25d1-e9f919f17221 -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/cuboid/ -jobname Kylin_Cube_Builder_retailers_selling_products_saothaiduong_demo -cubingJobId 32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.InMemCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-10",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Convert Cuboid Data to HFile",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename retailers_selling_products_saothaiduong_demo -partitions hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/rowkey_stats/part-r-00000_hfile -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/cuboid/* -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/hfile -htablename KYLIN_UQMUE1WW28 -jobname Kylin_HFile_Generator_retailers_selling_products_saothaiduong_demo_Step",
+      "MR_COUNTER_SAVEAS" : ",,byteSizeBytes",
+      "MR_JOB_CLASS" : "org.apache.kylin.storage.hbase.steps.CubeHFileJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-11",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Load HFile to HBase Table",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.storage.hbase.steps.BulkLoadJob",
+      "HADOOP_SHELL_JOB_PARAMS" : " -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/hfile -htablename KYLIN_UQMUE1WW28 -cubename retailers_selling_products_saothaiduong_demo"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-12",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Update Cube Info",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.steps.UpdateCubeInfoAfterBuildStep",
+    "params" : {
+      "cubingJobId" : "32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "output.path" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/fact_distinct_columns",
+      "segmentId" : "5c5b5c46-2496-6aff-25d1-e9f919f17221",
+      "cubeName" : "retailers_selling_products_saothaiduong_demo"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-13",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Hive Cleanup",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.source.hive.GarbageCollectionStep",
+    "params" : {
+      "oldHiveTables" : "default.kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221",
+      "oldHiveViewIntermediateTables" : "",
+      "externalDataPaths" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/kylin_intermediate_retailers_selling_products_saothaiduong_demo_5c5b5c46_2496_6aff_25d1_e9f919f17221"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "32e1c827-7a86-2137-ecd7-3d6c99c12007-14",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Garbage Collection on HDFS",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.storage.hbase.steps.HDFSPathGarbageCollectionStep",
+    "params" : {
+      "jobId" : "32e1c827-7a86-2137-ecd7-3d6c99c12007",
+      "toDeletePaths" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/fact_distinct_columns,hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/hfile,hdfs://localhost:9000/kylin/kylin_metadata/kylin-32e1c827-7a86-2137-ecd7-3d6c99c12007/retailers_selling_products_saothaiduong_demo/dictionary_shrunken"
+    },
+    "priority" : 10
+  } ],
+  "tasks_check" : null,
+  "type" : "org.apache.kylin.engine.mr.CubingJob",
+  "params" : {
+    "submitter" : "ADMIN",
+    "envName" : "QA",
+    "segmentId" : "5c5b5c46-2496-6aff-25d1-e9f919f17221",
+    "notify_list" : "",
+    "projectName" : "kdn_project",
+    "jobType" : "BUILD",
+    "cubeName" : "retailers_selling_products_saothaiduong_demo",
+    "segmentName" : "FULL_BUILD"
+  },
+  "priority" : 20
+}

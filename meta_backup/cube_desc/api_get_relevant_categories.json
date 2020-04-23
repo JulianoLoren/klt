@@ -1,0 +1,128 @@
+{
+  "uuid" : "a79749d8-a063-fe53-f4ba-076ad2567b92",
+  "last_modified" : 1585191772672,
+  "version" : "3.0.0.20500",
+  "name" : "api_get_relevant_categories",
+  "is_draft" : false,
+  "model_name" : "api_get_relevant_categories",
+  "description" : "",
+  "null_string" : null,
+  "dimensions" : [ {
+    "name" : "RETAILER_ID",
+    "table" : "API_GET_RELEVANT_CATEGORIES",
+    "column" : "RETAILER_ID",
+    "derived" : null
+  }, {
+    "name" : "RECOMMENDED_ITEM",
+    "table" : "API_GET_RELEVANT_CATEGORIES",
+    "column" : "RECOMMENDED_ITEM",
+    "derived" : null
+  }, {
+    "name" : "AVG_QUANTITY",
+    "table" : "API_GET_RELEVANT_CATEGORIES",
+    "column" : "AVG_QUANTITY",
+    "derived" : null
+  }, {
+    "name" : "AVG_REVENUE",
+    "table" : "API_GET_RELEVANT_CATEGORIES",
+    "column" : "AVG_REVENUE",
+    "derived" : null
+  }, {
+    "name" : "COUNT_COMMON_USERS",
+    "table" : "API_GET_RELEVANT_CATEGORIES",
+    "column" : "COUNT_COMMON_USERS",
+    "derived" : null
+  }, {
+    "name" : "EXPECTED_COMMON_USERS",
+    "table" : "API_GET_RELEVANT_CATEGORIES",
+    "column" : "EXPECTED_COMMON_USERS",
+    "derived" : null
+  }, {
+    "name" : "SCORE",
+    "table" : "API_GET_RELEVANT_CATEGORIES",
+    "column" : "SCORE",
+    "derived" : null
+  } ],
+  "measures" : [ {
+    "name" : "_COUNT_",
+    "function" : {
+      "expression" : "COUNT",
+      "parameter" : {
+        "type" : "constant",
+        "value" : "1"
+      },
+      "returntype" : "bigint"
+    }
+  } ],
+  "dictionaries" : [ ],
+  "rowkey" : {
+    "rowkey_columns" : [ {
+      "column" : "API_GET_RELEVANT_CATEGORIES.RETAILER_ID",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_RELEVANT_CATEGORIES.RECOMMENDED_ITEM",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_RELEVANT_CATEGORIES.AVG_QUANTITY",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_RELEVANT_CATEGORIES.AVG_REVENUE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_RELEVANT_CATEGORIES.COUNT_COMMON_USERS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_RELEVANT_CATEGORIES.EXPECTED_COMMON_USERS",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "API_GET_RELEVANT_CATEGORIES.SCORE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    } ]
+  },
+  "hbase_mapping" : {
+    "column_family" : [ {
+      "name" : "F1",
+      "columns" : [ {
+        "qualifier" : "M",
+        "measure_refs" : [ "_COUNT_" ]
+      } ]
+    } ]
+  },
+  "aggregation_groups" : [ {
+    "includes" : [ "API_GET_RELEVANT_CATEGORIES.RETAILER_ID", "API_GET_RELEVANT_CATEGORIES.RECOMMENDED_ITEM", "API_GET_RELEVANT_CATEGORIES.AVG_QUANTITY", "API_GET_RELEVANT_CATEGORIES.AVG_REVENUE", "API_GET_RELEVANT_CATEGORIES.COUNT_COMMON_USERS", "API_GET_RELEVANT_CATEGORIES.EXPECTED_COMMON_USERS", "API_GET_RELEVANT_CATEGORIES.SCORE" ],
+    "select_rule" : {
+      "hierarchy_dims" : [ ],
+      "mandatory_dims" : [ ],
+      "joint_dims" : [ ]
+    }
+  } ],
+  "signature" : "vioYDK9QEm7L+30oNTLZEA==",
+  "notify_list" : [ ],
+  "status_need_notify" : [ "ERROR", "DISCARDED", "SUCCEED" ],
+  "partition_date_start" : 0,
+  "partition_date_end" : 3153600000000,
+  "auto_merge_time_ranges" : [ 604800000, 2419200000 ],
+  "volatile_range" : 0,
+  "retention_range" : 0,
+  "engine_type" : 2,
+  "storage_type" : 2,
+  "override_kylin_properties" : { },
+  "cuboid_black_list" : [ ],
+  "parent_forward" : 3,
+  "mandatory_dimension_set_list" : [ ],
+  "snapshot_table_desc_list" : [ ]
+}

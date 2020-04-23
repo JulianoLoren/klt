@@ -1,0 +1,20 @@
+{
+  "uuid" : "37d0839f-56f6-d8e1-cb1a-072613fd0433-02",
+  "last_modified" : 1582774385533,
+  "version" : "3.0.0.20500",
+  "content" : "Counters: 49\n\tFile System Counters\n\t\tFILE: Number of bytes read=321458\n\t\tFILE: Number of bytes written=1315658\n\t\tFILE: Number of read operations=0\n\t\tFILE: Number of large read operations=0\n\t\tFILE: Number of write operations=0\n\t\tHDFS: Number of bytes read=985038\n\t\tHDFS: Number of bytes written=252590\n\t\tHDFS: Number of read operations=71\n\t\tHDFS: Number of large read operations=0\n\t\tHDFS: Number of write operations=2\n\tJob Counters \n\t\tLaunched map tasks=4\n\t\tLaunched reduce tasks=1\n\t\tOther local map tasks=4\n\t\tTotal time spent by all maps in occupied slots (ms)=46722\n\t\tTotal time spent by all reduces in occupied slots (ms)=32372\n\t\tTotal time spent by all map tasks (ms)=15574\n\t\tTotal time spent by all reduce tasks (ms)=32372\n\t\tTotal vcore-seconds taken by all map tasks=15574\n\t\tTotal vcore-seconds taken by all reduce tasks=32372\n\t\tTotal megabyte-seconds taken by all map tasks=47843328\n\t\tTotal megabyte-seconds taken by all reduce tasks=33148928\n\tMap-Reduce Framework\n\t\tMap input records=98229\n\t\tMap output records=98229\n\t\tMap output bytes=3339786\n\t\tMap output materialized bytes=371395\n\t\tInput split bytes=628\n\t\tCombine input records=0\n\t\tCombine output records=0\n\t\tReduce input groups=98229\n\t\tReduce shuffle bytes=371395\n\t\tReduce input records=98229\n\t\tReduce output records=98229\n\t\tSpilled Records=196458\n\t\tShuffled Maps =4\n\t\tFailed Shuffles=0\n\t\tMerged Map outputs=4\n\t\tGC time elapsed (ms)=3012\n\t\tCPU time spent (ms)=40240\n\t\tPhysical memory (bytes) snapshot=2249007104\n\t\tVirtual memory (bytes) snapshot=21572661248\n\t\tTotal committed heap usage (bytes)=2079326208\n\tShuffle Errors\n\t\tBAD_ID=0\n\t\tCONNECTION=0\n\t\tIO_ERROR=0\n\t\tWRONG_LENGTH=0\n\t\tWRONG_MAP=0\n\t\tWRONG_REDUCE=0\n\tFile Input Format Counters \n\t\tBytes Read=984410\n\tFile Output Format Counters \n\t\tBytes Written=252590\n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1582774109951",
+    "yarn_application_id" : "application_1581647538653_1450",
+    "mr_job_id" : "job_1581647538653_1450",
+    "yarn_application_tracking_url" : "ip-172-31-15-241.ap-east-1.compute.internal:19888/jobhistory/job/job_1581647538653_1450",
+    "mapReduceWaitTime" : "232413",
+    "hdfs_bytes_written" : "252590",
+    "sourceSizeBytes" : "0",
+    "source_records_count" : "98229",
+    "source_records_size" : "0",
+    "sourceRecordCount" : "98229",
+    "endTime" : "1582774385532"
+  }
+}

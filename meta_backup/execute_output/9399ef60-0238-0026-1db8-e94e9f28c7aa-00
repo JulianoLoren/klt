@@ -1,0 +1,14 @@
+{
+  "uuid" : "9399ef60-0238-0026-1db8-e94e9f28c7aa-00",
+  "last_modified" : 1581653204117,
+  "version" : "3.0.0.20500",
+  "content" : null,
+  "status" : "DISCARDED",
+  "info" : {
+    "startTime" : "1581652618158",
+    "yarn_application_tracking_url" : "http://ip-172-31-15-241.ap-east-1.compute.internal:8088/proxy/application_1581647538653_0026/",
+    "hdfs_bytes_written" : "65159979",
+    "source_records_size" : "754785830",
+    "endTime" : "1581653204116"
+  }
+}

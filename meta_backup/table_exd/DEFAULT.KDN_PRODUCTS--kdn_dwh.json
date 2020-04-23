@@ -1,0 +1,68 @@
+{
+  "uuid" : "4eaad9d9-7841-a6c5-d626-37f40a310403",
+  "last_modified" : 1584409705937,
+  "version" : "3.0.0.20500",
+  "table_name" : "DEFAULT.KDN_PRODUCTS",
+  "last_build_job_id" : "ca4a3733-c5ec-0c5d-3aa2-dab4acc50b56",
+  "frequency" : 0,
+  "columns_stats" : [ {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 1,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 1,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 1,
+    "data_skew_samples" : { }
+  }, {
+    "column_name" : null,
+    "max_value" : null,
+    "min_value" : null,
+    "max_length_value" : null,
+    "min_length_value" : null,
+    "null_count" : 0,
+    "exceed_precision_count" : 0,
+    "exceed_precision_max_length_value" : null,
+    "cardinality" : 1,
+    "data_skew_samples" : { }
+  } ],
+  "sample_rows" : [ ],
+  "last_modified_time" : 0,
+  "total_rows" : 0,
+  "mapper_rows" : [ ],
+  "data_source_properties" : {
+    "owner" : "root",
+    "skip_header_line_count" : "0",
+    "total_file_size" : "37",
+    "hive_inputFormat" : "org.apache.hadoop.mapred.TextInputFormat",
+    "hive_outputFormat" : "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+    "location" : "hdfs://localhost:9000/user/hive/warehouse/kdn_products",
+    "partition_column" : "",
+    "total_file_number" : "1",
+    "last_access_time" : "0"
+  }
+}

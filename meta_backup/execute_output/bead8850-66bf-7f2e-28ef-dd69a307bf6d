@@ -1,0 +1,14 @@
+{
+  "uuid" : "bead8850-66bf-7f2e-28ef-dd69a307bf6d",
+  "last_modified" : 1583290756254,
+  "version" : "3.0.0.20500",
+  "content" : null,
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1583289756851",
+    "buildInstance" : "16021@ip-172-31-15-241.ap-east-1.compute.internal",
+    "mapReduceWaitTime" : "925143",
+    "algorithm" : "INMEM",
+    "endTime" : "1583290756253"
+  }
+}

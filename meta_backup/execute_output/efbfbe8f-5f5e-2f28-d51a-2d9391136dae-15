@@ -1,0 +1,11 @@
+{
+  "uuid" : "efbfbe8f-5f5e-2f28-d51a-2d9391136dae-15",
+  "last_modified" : 1581669953679,
+  "version" : "3.0.0.20500",
+  "content" : "Hive table default.kylin_intermediate_cube_sale_min_clone_d471d8f5_9173_d65f_6b03_9ca5754ac321 is dropped. \nPath [hdfs://localhost:9000/kylin/kylin_metadata/kylin-efbfbe8f-5f5e-2f28-d51a-2d9391136dae/kylin_intermediate_cube_sale_min_clone_d471d8f5_9173_d65f_6b03_9ca5754ac321] is deleted. \n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1581669946390",
+    "endTime" : "1581669953677"
+  }
+}

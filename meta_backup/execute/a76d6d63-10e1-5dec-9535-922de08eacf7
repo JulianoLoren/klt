@@ -1,0 +1,303 @@
+{
+  "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7",
+  "last_modified" : 1581653122335,
+  "version" : "3.0.0.20500",
+  "name" : "BUILD CUBE - cube_sale_clone - 20200101000000_20200301000000 - UTC 2020-02-14 04:05:21",
+  "tasks" : [ {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-00",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Create Intermediate Flat Hive Table",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.source.hive.CreateFlatHiveTableStep",
+    "params" : {
+      "HiveInit" : "USE default;\n",
+      "HiveRedistributeData" : "DROP TABLE IF EXISTS kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e;\nCREATE EXTERNAL TABLE IF NOT EXISTS kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e\n(\n`KDN_ORDER_DETAILS_ID` bigint\n,`KDN_ORDER_DETAILS_ORDER_ID` bigint\n,`KDN_ORDER_DETAILS_PRODUCT_ID` bigint\n,`KDN_ORDER_DETAILS_UNIT_PRICE` double\n,`KDN_ORDER_DETAILS_DELIVERY_STATUS` tinyint\n,`KDN_ORDER_DETAILS_DELIVERED_QTY` int\n,`KDN_ORDER_DETAILS_CREATED_AT` string\n,`KDN_ORDER_DETAILS_UPDATED_AT` string\n,`KDN_PRODUCTS_NAME` string\n,`KDN_ORDER_DETAILS_QTY` int\n)\nSTORED AS SEQUENCEFILE\nLOCATION 'hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e';\nALTER TABLE kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e SET TBLPROPERTIES('auto.purge'='true');\nINSERT OVERWRITE TABLE `kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e` SELECT\n`KDN_ORDER_DETAILS`.`ID` as `KDN_ORDER_DETAILS_ID`\n,`KDN_ORDER_DETAILS`.`ORDER_ID` as `KDN_ORDER_DETAILS_ORDER_ID`\n,`KDN_ORDER_DETAILS`.`PRODUCT_ID` as `KDN_ORDER_DETAILS_PRODUCT_ID`\n,`KDN_ORDER_DETAILS`.`UNIT_PRICE` as `KDN_ORDER_DETAILS_UNIT_PRICE`\n,`KDN_ORDER_DETAILS`.`DELIVERY_STATUS` as `KDN_ORDER_DETAILS_DELIVERY_STATUS`\n,`KDN_ORDER_DETAILS`.`DELIVERED_QTY` as `KDN_ORDER_DETAILS_DELIVERED_QTY`\n,`KDN_ORDER_DETAILS`.`CREATED_AT` as `KDN_ORDER_DETAILS_CREATED_AT`\n,`KDN_ORDER_DETAILS`.`UPDATED_AT` as `KDN_ORDER_DETAILS_UPDATED_AT`\n,`KDN_PRODUCTS`.`NAME` as `KDN_PRODUCTS_NAME`\n,`KDN_ORDER_DETAILS`.`QTY` as `KDN_ORDER_DETAILS_QTY`\n FROM `DEFAULT`.`KDN_ORDER_DETAILS` as `KDN_ORDER_DETAILS`\nLEFT JOIN `DEFAULT`.`KDN_PRODUCTS` as `KDN_PRODUCTS`\nON `KDN_ORDER_DETAILS`.`PRODUCT_ID` = `KDN_PRODUCTS`.`ID`\nWHERE 1=1 AND (`KDN_ORDER_DETAILS`.`UPDATED_AT` >= '2020-01-01 00:00:00' AND `KDN_ORDER_DETAILS`.`UPDATED_AT` < '2020-03-01 00:00:00')\n;\n",
+      "cubeName" : "cube_sale_clone"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-01",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Redistribute Flat Hive Table",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.source.hive.RedistributeFlatHiveTableStep",
+    "params" : {
+      "HiveInit" : "USE default;\n",
+      "HiveRedistributeData" : "INSERT OVERWRITE TABLE `kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e` SELECT * FROM `kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e` DISTRIBUTE BY KDN_ORDER_DETAILS_ID,KDN_ORDER_DETAILS_ORDER_ID,KDN_ORDER_DETAILS_PRODUCT_ID;\n",
+      "cubeName" : "cube_sale_clone",
+      "intermediateTable" : "kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-02",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Extract Fact Table Distinct Columns",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/fact_distinct_columns -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -statisticsoutput hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/fact_distinct_columns/statistics -statisticssamplingpercent 100 -jobname Kylin_Fact_Distinct_Columns_cube_sale_clone_Step -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_COUNTER_SAVEAS" : "sourceRecordCount,sourceSizeBytes",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.FactDistinctColumnsJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-03",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build Dimension Dictionary",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.CreateDictionaryJob",
+      "HADOOP_SHELL_JOB_PARAMS" : " -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/fact_distinct_columns -dictPath hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/dict -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-04",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Save Cuboid Statistics",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.steps.SaveStatisticsStep",
+    "params" : {
+      "cubingJobId" : "a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "segmentId" : "e5485971-2cdd-49af-af83-719a9c16b90e",
+      "statisticsPath" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/fact_distinct_columns/statistics",
+      "cubeName" : "cube_sale_clone"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-05",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Create HTable",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.storage.hbase.steps.CreateHTableJob",
+      "HADOOP_SHELL_JOB_PARAMS" : " -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -partitions hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/rowkey_stats/part-r-00000 -cuboidMode CURRENT -hbaseConfPath hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/hbase-conf.xml"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-06",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build Base Cuboid",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input FLAT_TABLE -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_base_cuboid -jobname Kylin_Base_Cuboid_Builder_cube_sale_clone -level 0 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.BaseCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-07",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 1",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_base_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_1_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 1 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-08",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 2",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_1_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_2_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 2 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-09",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 3",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_2_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_3_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 3 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-10",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 4",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_3_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_4_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 4 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-11",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 5",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_4_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_5_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 5 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-12",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 6",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_5_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_6_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 6 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-13",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 7",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_6_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_7_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 7 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-14",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build N-Dimension Cuboid : level 8",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_7_cuboid -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/level_8_cuboid -jobname Kylin_ND-Cuboid_Builder_cube_sale_clone_Step -level 8 -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.NDCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-15",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Build Cube In-Mem",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf_inmem.xml -cubename cube_sale_clone -segmentid e5485971-2cdd-49af-af83-719a9c16b90e -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/ -jobname Kylin_Cube_Builder_cube_sale_clone -cubingJobId a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "MR_JOB_CLASS" : "org.apache.kylin.engine.mr.steps.InMemCuboidJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-16",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Convert Cuboid Data to HFile",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.MapReduceExecutable",
+    "params" : {
+      "MR_JOB_PARAMS" : " -conf /home/admin/apache-kylin-3.0.0-bin-hbase1x/conf/kylin_job_conf.xml -cubename cube_sale_clone -partitions hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/rowkey_stats/part-r-00000_hfile -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/cuboid/* -output hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/hfile -htablename KYLIN_ABKKPIL4M5 -jobname Kylin_HFile_Generator_cube_sale_clone_Step",
+      "MR_COUNTER_SAVEAS" : ",,byteSizeBytes",
+      "MR_JOB_CLASS" : "org.apache.kylin.storage.hbase.steps.CubeHFileJob"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-17",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Load HFile to HBase Table",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.common.HadoopShellExecutable",
+    "params" : {
+      "HADOOP_SHELL_JOB_CLASS" : "org.apache.kylin.storage.hbase.steps.BulkLoadJob",
+      "HADOOP_SHELL_JOB_PARAMS" : " -input hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/hfile -htablename KYLIN_ABKKPIL4M5 -cubename cube_sale_clone"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-18",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Update Cube Info",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.engine.mr.steps.UpdateCubeInfoAfterBuildStep",
+    "params" : {
+      "cubingJobId" : "a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "output.path" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/fact_distinct_columns",
+      "segmentId" : "e5485971-2cdd-49af-af83-719a9c16b90e",
+      "cubeName" : "cube_sale_clone"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-19",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Hive Cleanup",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.source.hive.GarbageCollectionStep",
+    "params" : {
+      "oldHiveTables" : "default.kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e",
+      "oldHiveViewIntermediateTables" : "",
+      "externalDataPaths" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/kylin_intermediate_cube_sale_clone_e5485971_2cdd_49af_af83_719a9c16b90e"
+    },
+    "priority" : 10
+  }, {
+    "uuid" : "a76d6d63-10e1-5dec-9535-922de08eacf7-20",
+    "last_modified" : 0,
+    "version" : "3.0.0.20500",
+    "name" : "Garbage Collection on HDFS",
+    "tasks" : null,
+    "tasks_check" : null,
+    "type" : "org.apache.kylin.storage.hbase.steps.HDFSPathGarbageCollectionStep",
+    "params" : {
+      "jobId" : "a76d6d63-10e1-5dec-9535-922de08eacf7",
+      "toDeletePaths" : "hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/fact_distinct_columns,hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/hfile,hdfs://localhost:9000/kylin/kylin_metadata/kylin-a76d6d63-10e1-5dec-9535-922de08eacf7/cube_sale_clone/dictionary_shrunken"
+    },
+    "priority" : 10
+  } ],
+  "tasks_check" : null,
+  "type" : "org.apache.kylin.engine.mr.CubingJob",
+  "params" : {
+    "submitter" : "ADMIN",
+    "envName" : "QA",
+    "segmentId" : "e5485971-2cdd-49af-af83-719a9c16b90e",
+    "notify_list" : "",
+    "projectName" : "kdn_project",
+    "jobType" : "BUILD",
+    "cubeName" : "cube_sale_clone",
+    "segmentName" : "20200101000000_20200301000000"
+  },
+  "priority" : 20
+}

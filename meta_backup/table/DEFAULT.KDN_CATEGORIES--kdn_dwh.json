@@ -1,0 +1,26 @@
+{
+  "uuid" : "80f5b908-b8be-1f52-ab3a-89ae42b5c24a",
+  "last_modified" : 1585209784418,
+  "version" : "3.0.0.20500",
+  "name" : "KDN_CATEGORIES",
+  "columns" : [ {
+    "id" : "1",
+    "name" : "RETAILER_ID",
+    "datatype" : "bigint"
+  }, {
+    "id" : "2",
+    "name" : "CATEGORY_ID",
+    "datatype" : "bigint"
+  }, {
+    "id" : "3",
+    "name" : "QUANTITY",
+    "datatype" : "decimal(18,5)"
+  }, {
+    "id" : "4",
+    "name" : "REVENUE",
+    "datatype" : "decimal(18,5)"
+  } ],
+  "source_type" : 0,
+  "table_type" : "MANAGED_TABLE",
+  "database" : "DEFAULT"
+}

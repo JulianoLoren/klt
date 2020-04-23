@@ -1,0 +1,20 @@
+{
+  "uuid" : "b53e9986-414f-3d57-4c5d-e60dbd9c9473-02",
+  "last_modified" : 1584428007664,
+  "version" : "3.0.0.20500",
+  "content" : "Counters: 51\n\tFile System Counters\n\t\tFILE: Number of bytes read=849825\n\t\tFILE: Number of bytes written=3443801\n\t\tFILE: Number of read operations=0\n\t\tFILE: Number of large read operations=0\n\t\tFILE: Number of write operations=0\n\t\tHDFS: Number of bytes read=4073792\n\t\tHDFS: Number of bytes written=2228252\n\t\tHDFS: Number of read operations=25\n\t\tHDFS: Number of large read operations=0\n\t\tHDFS: Number of write operations=20\n\tJob Counters \n\t\tKilled reduce tasks=1\n\t\tLaunched map tasks=1\n\t\tLaunched reduce tasks=8\n\t\tData-local map tasks=1\n\t\tTotal time spent by all maps in occupied slots (ms)=6706\n\t\tTotal time spent by all reduces in occupied slots (ms)=52477\n\t\tTotal time spent by all map tasks (ms)=6706\n\t\tTotal time spent by all reduce tasks (ms)=52477\n\t\tTotal vcore-seconds taken by all map tasks=6706\n\t\tTotal vcore-seconds taken by all reduce tasks=52477\n\t\tTotal megabyte-seconds taken by all map tasks=6866944\n\t\tTotal megabyte-seconds taken by all reduce tasks=53736448\n\tMap-Reduce Framework\n\t\tMap input records=41102\n\t\tMap output records=129841\n\t\tMap output bytes=2911392\n\t\tMap output materialized bytes=849769\n\t\tInput split bytes=1732\n\t\tCombine input records=129841\n\t\tCombine output records=67382\n\t\tReduce input groups=67382\n\t\tReduce shuffle bytes=849769\n\t\tReduce input records=67382\n\t\tReduce output records=0\n\t\tSpilled Records=134764\n\t\tShuffled Maps =7\n\t\tFailed Shuffles=0\n\t\tMerged Map outputs=7\n\t\tGC time elapsed (ms)=1917\n\t\tCPU time spent (ms)=39670\n\t\tPhysical memory (bytes) snapshot=1789161472\n\t\tVirtual memory (bytes) snapshot=17094541312\n\t\tTotal committed heap usage (bytes)=1209532416\n\tShuffle Errors\n\t\tBAD_ID=0\n\t\tCONNECTION=0\n\t\tIO_ERROR=0\n\t\tWRONG_LENGTH=0\n\t\tWRONG_MAP=0\n\t\tWRONG_REDUCE=0\n\tFile Input Format Counters \n\t\tBytes Read=0\n\tFile Output Format Counters \n\t\tBytes Written=0\n\torg.apache.kylin.engine.mr.steps.FactDistinctColumnsMapper$RawDataCounter\n\t\tBYTES=3505819\n",
+  "status" : "SUCCEED",
+  "info" : {
+    "startTime" : "1584427815520",
+    "yarn_application_id" : "application_1584339967426_0403",
+    "mr_job_id" : "job_1584339967426_0403",
+    "yarn_application_tracking_url" : "http://ip-172-31-15-241.ap-east-1.compute.internal:8088/proxy/application_1584339967426_0403/",
+    "mapReduceWaitTime" : "161979",
+    "hdfs_bytes_written" : "2228252",
+    "sourceSizeBytes" : "3505819",
+    "source_records_count" : "41102",
+    "source_records_size" : "3505819",
+    "sourceRecordCount" : "41102",
+    "endTime" : "1584428007662"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "uuid" : "b46685fd-5773-9fdd-210a-1ea74818c3dd",
+  "last_modified" : 1585209847978,
+  "version" : "3.0.0.20500",
+  "name" : "kdn_categories",
+  "is_draft" : false,
+  "model_name" : "kdn_categories",
+  "description" : "",
+  "null_string" : null,
+  "dimensions" : [ {
+    "name" : "RETAILER_ID",
+    "table" : "KDN_CATEGORIES",
+    "column" : "RETAILER_ID",
+    "derived" : null
+  }, {
+    "name" : "CATEGORY_ID",
+    "table" : "KDN_CATEGORIES",
+    "column" : "CATEGORY_ID",
+    "derived" : null
+  }, {
+    "name" : "QUANTITY",
+    "table" : "KDN_CATEGORIES",
+    "column" : "QUANTITY",
+    "derived" : null
+  }, {
+    "name" : "REVENUE",
+    "table" : "KDN_CATEGORIES",
+    "column" : "REVENUE",
+    "derived" : null
+  } ],
+  "measures" : [ {
+    "name" : "_COUNT_",
+    "function" : {
+      "expression" : "COUNT",
+      "parameter" : {
+        "type" : "constant",
+        "value" : "1"
+      },
+      "returntype" : "bigint"
+    }
+  } ],
+  "dictionaries" : [ ],
+  "rowkey" : {
+    "rowkey_columns" : [ {
+      "column" : "KDN_CATEGORIES.RETAILER_ID",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_CATEGORIES.CATEGORY_ID",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_CATEGORIES.QUANTITY",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    }, {
+      "column" : "KDN_CATEGORIES.REVENUE",
+      "encoding" : "dict",
+      "encoding_version" : 1,
+      "isShardBy" : false
+    } ]
+  },
+  "hbase_mapping" : {
+    "column_family" : [ {
+      "name" : "F1",
+      "columns" : [ {
+        "qualifier" : "M",
+        "measure_refs" : [ "_COUNT_" ]
+      } ]
+    } ]
+  },
+  "aggregation_groups" : [ {
+    "includes" : [ "KDN_CATEGORIES.RETAILER_ID", "KDN_CATEGORIES.CATEGORY_ID", "KDN_CATEGORIES.QUANTITY", "KDN_CATEGORIES.REVENUE" ],
+    "select_rule" : {
+      "hierarchy_dims" : [ ],
+      "mandatory_dims" : [ ],
+      "joint_dims" : [ ]
+    }
+  } ],
+  "signature" : "rURYVT78y3TTJFMybnx5tg==",
+  "notify_list" : [ ],
+  "status_need_notify" : [ "ERROR", "DISCARDED", "SUCCEED" ],
+  "partition_date_start" : 0,
+  "partition_date_end" : 3153600000000,
+  "auto_merge_time_ranges" : [ 604800000, 2419200000 ],
+  "volatile_range" : 0,
+  "retention_range" : 0,
+  "engine_type" : 2,
+  "storage_type" : 2,
+  "override_kylin_properties" : { },
+  "cuboid_black_list" : [ ],
+  "parent_forward" : 3,
+  "mandatory_dimension_set_list" : [ ],
+  "snapshot_table_desc_list" : [ ]
+}
