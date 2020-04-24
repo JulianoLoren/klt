@@ -11,4 +11,4 @@ subprocess.call(["hive", "-f","/tmp/klt/sql/{}.sql".format('kdn_product_category
 subprocess.call(["hive", "-f","/tmp/klt/sql/{}.sql".format('kdn_product_suggestion')])
 subprocess.call(["hive", "-f","/tmp/klt/sql/{}.sql".format('kdn_product_suggestion_item_based')])
 
-subprocess.call(["hive", "-f","/tmp/klt/sql/view.sql"])
+subprocess.call(["hive", "-f","/tmp/klt/sql/views.sql"])
